@@ -27,7 +27,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="PRESS ME IF YOU&apos;RE READY"/>
+        <Property name="text" type="java.lang.String" value="MOUSE ON HERE"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseEntered"/>
@@ -36,14 +36,14 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="380" y="360" width="250" height="100"/>
+          <AbsoluteConstraints x="370" y="450" width="250" height="100"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="main_background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/Main_back.png"/>
+          <Image iconType="3" name="/images/beg_quiz.png"/>
         </Property>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>

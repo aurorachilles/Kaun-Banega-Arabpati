@@ -31,7 +31,7 @@ public class main extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("PRESS ME IF YOU'RE READY");
+        jButton1.setText("MOUSE ON HERE");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton1MouseEntered(evt);
@@ -45,9 +45,9 @@ public class main extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 250, 100));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 250, 100));
 
-        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Main_back.png"))); // NOI18N
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/beg_quiz.png"))); // NOI18N
         main_background.setOpaque(true);
         getContentPane().add(main_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 660));
 
@@ -65,6 +65,7 @@ public class main extends javax.swing.JFrame {
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
         // TODO add your handling code here:
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/beg_quiz.png"))); 
     }//GEN-LAST:event_jButton1MouseExited
 
     /**
