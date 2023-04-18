@@ -2,6 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+import java.sql.*;
+
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -53,6 +60,11 @@ public class login_page extends javax.swing.JFrame {
         getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 220, 50));
 
         login_button.setText("Login");
+        login_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                login_buttonActionPerformed(evt);
+            }
+        });
         getContentPane().add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 160, 40));
 
         jLabel1.setOpaque(true);
@@ -72,6 +84,29 @@ public class login_page extends javax.swing.JFrame {
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void login_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_buttonActionPerformed
+        String user = username.getText();
+        char[] pass_char = password.getPassword();
+        String pass = new String(pass_char);
+        
+        try {
+            String database_user = "root";
+            String database_pass = "rootroot";
+            String url = "jdbc:mysql://127.0.0.1:3306/server";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connect = DriverManager.getConnection(url, database_user, database_pass);
+                
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     
+        
+        
+    }//GEN-LAST:event_login_buttonActionPerformed
 
     public static void main(String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
         
