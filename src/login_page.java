@@ -31,6 +31,8 @@ public class login_page extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        username_empty = new javax.swing.JLabel();
+        password_empty = new javax.swing.JLabel();
         To_register = new javax.swing.JLabel();
         Login_text = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
@@ -42,6 +44,14 @@ public class login_page extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        username_empty.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
+        username_empty.setForeground(new java.awt.Color(153, 153, 153));
+        getContentPane().add(username_empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 220, 20));
+
+        password_empty.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
+        password_empty.setForeground(new java.awt.Color(153, 153, 153));
+        getContentPane().add(password_empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 220, 20));
+
         To_register.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         To_register.setText("Register");
         To_register.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -49,18 +59,19 @@ public class login_page extends javax.swing.JFrame {
                 To_registerMouseClicked(evt);
             }
         });
-        getContentPane().add(To_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 70, 40));
+        getContentPane().add(To_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 70, 40));
 
         Login_text.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         Login_text.setText("LOGIN");
-        getContentPane().add(Login_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 70, 40));
+        getContentPane().add(Login_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 70, 40));
 
+        username.setFont(new java.awt.Font("Segoe UI Semibold", 0, 21)); // NOI18N
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
             }
         });
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 220, 50));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 220, 50));
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,7 +86,7 @@ public class login_page extends javax.swing.JFrame {
                 login_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 160, 40));
+        getContentPane().add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 160, 40));
 
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 720, 410));
@@ -100,20 +111,44 @@ public class login_page extends javax.swing.JFrame {
         char[] pass_char = password.getPassword();
         String pass = new String(pass_char);
         
+        if("".equals(user))
+        {
+            username_empty.setText("Username can't be empty!");
+        }
+        else if("".equals(pass))
+        {
+            password_empty.setText("Password can't be empty!");
+        }
+        else
+        {
+        
         String database_user = "root";
         String database_pass = "rootroot";
         String url = "jdbc:mysql://127.0.0.1:3306/server";
         try { 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connect = DriverManager.getConnection(url, database_user, database_pass);
-           
+            String sql = "Select id from users where username='"+user+"' and password='"+pass+"'";
+            PreparedStatement stmt = connect.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next())
+            {
+                String unique_id = rs.getString(1);
+                new mainpage(unique_id).setVisible(true);
+                this.dispose();
+            }
+            else
+            {
+                username.setText("");
+                password.setText("");
+            }
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
         }
-     
+        }
         
         
     }//GEN-LAST:event_login_buttonActionPerformed
@@ -158,6 +193,8 @@ public class login_page extends javax.swing.JFrame {
     private javax.swing.JButton login_button;
     private javax.swing.JLabel main_Background;
     private javax.swing.JPasswordField password;
+    private javax.swing.JLabel password_empty;
     private javax.swing.JTextField username;
+    private javax.swing.JLabel username_empty;
     // End of variables declaration//GEN-END:variables
 }

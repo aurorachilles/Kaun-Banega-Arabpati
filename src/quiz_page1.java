@@ -12,9 +12,11 @@ public class quiz_page1 extends javax.swing.JFrame {
     /**
      * Creates new form quiz_page1
      */
-    public quiz_page1() {
+    public quiz_page1(String abs) {
         initComponents();
+        unique_id = abs;
     }
+    public static String unique_id;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -102,7 +104,7 @@ public class quiz_page1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new quiz_page1().setVisible(true);
+                new quiz_page1(unique_id).setVisible(true);
             }
         });
     }
