@@ -1,0 +1,11 @@
+create table [insert table name] (
+id int PRIMARY KEY NOT NULL,
+question varchar(1000) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+insert into [insert table name] values 
+(1,"Enter Question here","Option 1","Option 2","Option 3","Option 4","correct option-(a,b,c,d)");

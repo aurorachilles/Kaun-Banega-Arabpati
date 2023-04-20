@@ -1,0 +1,44 @@
+All quiz types:
+
+* Sport 
+	General (every sports)
+	Olympics (only olympics, winners, dates etc)
+* Geography
+	World
+	India
+* History
+	Indian
+	European
+	Asian 
+	Roman
+* Movies
+	Bollywood
+	Hollywood
+* Science
+	Astronomy (planets etc)
+	Inventors and Inventions (inventions and name of inventors)
+	Biology 
+	General
+* Pop-Culture
+	Celebrities
+	TV Shoes (Friends, The Office, etc)
+* Language
+	Guess the language (guess from letters)
+* Literature
+	Books and authors	
+	Awards
+* Automobiles
+	Cars
+	Bikes
+	Luxuary Vehicles
+* Politics
+	Geopolitics
+	Politics in India
+	United Nations
+	Noble Prizes
+* Misc
+	National Food of countries
+	National Animal of Countries
+	General Knowledge
+	Companies and TagLine
+	

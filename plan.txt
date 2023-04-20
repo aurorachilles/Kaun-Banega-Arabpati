@@ -1,0 +1,11 @@
+database:
+
+table of all users
+	-holds all the user data, [unique_id,name,password] - used for login
+
+
+specific user table
+	-holds all history of user win/lost/ quiz stat [quiz name,no of questions correct, percentage of corrrect ans, pass/fail] - will hold user stat
+
+table of quiz
+	will hold all quiz questions of the specific subject [question no,question,option a,b,c,d,correct option] - will match for correct question
