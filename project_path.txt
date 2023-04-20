@@ -1,0 +1,13 @@
+login ---> main page ----> quiz selection page 	
+  |						|
+register				sub quiz selection ---->
+
+
+--> start quiz page with instruction ---> quiz page 
+
+
+---> profile page
+
+
+
+canvas size = 1000x660
