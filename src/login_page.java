@@ -134,7 +134,7 @@ public class login_page extends javax.swing.JFrame {
             if(rs.next())
             {
                 String unique_id = rs.getString(1);
-                new mainpage(unique_id).setVisible(true);
+                new main_quiz_page(unique_id).setVisible(true);
                 this.dispose();
             }
             else
