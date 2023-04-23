@@ -29,23 +29,30 @@ public class main_quiz_page extends javax.swing.JFrame {
         Random random = new Random();
         while(list_of_files.size()<= 15)
         {
-            list_of_files.add(random.nextInt(40));
+            int num = random.nextInt(40);
+            if(num!=0)  //error aara with 0 index. can't access sql table
+                {list_of_files.add(num);}
         }
 
         are_you_sure.setVisible(false);
+        
+        if("language".equals(table_name))
+        {
+        Question_label.setFont(new Font("MS Gothic",Font.BOLD,24));
+        }
     }
     
     private static String unique_id,table_name;
     private static Set <Integer> list_of_files = new HashSet<Integer>();
     private Iterator i = list_of_files.iterator();
-    private static boolean start_check = false;
-    private static boolean game_on = true;
+    private static boolean start_check = false; //this is for shubh aahramb
+    private static boolean game_on = true;  //this to check if galat ans or not
     private static char correct_answer;
     private static char chosen_option;
     private static String database_user = "root";
     private static String database_pass = "rootroot";
     private static String url = "jdbc:mysql://127.0.0.1:3306/quiz";
-
+    private static boolean next_question = false;   //using this to track next question change
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -99,7 +106,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         });
         Confirm.add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 110, 50));
 
-        getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 580, 400));
+        getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 580, 400));
 
         money.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         money.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,13 +170,13 @@ public class main_quiz_page extends javax.swing.JFrame {
 
     private void option_aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_option_aMouseClicked
         chosen_option = 'A';
-        are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        are_you_sure.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_aMouseClicked
 
     private void option_aMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_option_aMousePressed
-       Confirm.setVisible(true);
+
     }//GEN-LAST:event_option_aMousePressed
 
     private void yesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesActionPerformed
@@ -194,13 +201,13 @@ public class main_quiz_page extends javax.swing.JFrame {
                     option_c.setText(rs.getString(5));
                     option_d.setText(rs.getString(6));
                     correct_answer = rs.getString(7).toUpperCase().charAt(0);
-                    start_check = true;                   
+                    start_check = true;
                 }             
                 else
                 {
-                    System.out.print("SQL ERROR");
-                    System.out.print(first);
-                    System.exit(0);
+                    System.out.println("SQL ERROR SEE KYA HUA");
+                    System.out.println(first);
+                    System.exit(-1);
                 }
             } catch (ClassNotFoundException | SQLException ex) {
                 Logger.getLogger(main_quiz_page.class.getName()).log(Level.SEVERE, null, ex);
@@ -210,7 +217,12 @@ public class main_quiz_page extends javax.swing.JFrame {
         
         else
         {
-            if(chosen_option == correct_answer)
+            if(game_on == false)
+            {
+                new main_quiz_page(unique_id,table_name).setVisible(true);
+                this.dispose();
+            }
+            else if(next_question == true)
             {
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -222,17 +234,38 @@ public class main_quiz_page extends javax.swing.JFrame {
                     
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(main_quiz_page.class.getName()).log(Level.SEVERE, null, ex);
+                }   finally {
+                    next_question = false;
+                    no.setVisible(true);
+                    are_you_sure.setVisible(true);
+                    are_you_sure_option.setVisible(true);
                 }
+                
+            }
+            
+            else if(chosen_option == correct_answer)
+            {
+                // change the picture here
+                no.setVisible(false);
+                are_you_sure.setVisible(false);
+                are_you_sure_option.setVisible(false);
+                are_you_ready.setVisible(true);
+                are_you_ready.setText("Right Answer! Continue by pressing Yes");
+                next_question = true;
             }
             else
             {
-            
+                are_you_sure.setVisible(false);
+                are_you_sure_option.setVisible(false);
+                are_you_ready.setText("Wrong Answer! Try again?");
+                game_on = false;
+
             }
         }
     }//GEN-LAST:event_yesActionPerformed
 
     private void noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noActionPerformed
-        if(start_check == false)
+        if(start_check == false || game_on == false)
         {
             new quiz_page1(unique_id).setVisible(true);
             this.dispose();
@@ -247,6 +280,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         chosen_option = 'B';
         are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        are_you_sure_option.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_bMouseClicked
 
@@ -254,6 +288,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         chosen_option = 'C';
         are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        are_you_sure_option.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_cMouseClicked
 
@@ -261,6 +296,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         chosen_option = 'D';
         are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        are_you_sure_option.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_dMouseClicked
 
@@ -292,8 +328,8 @@ public class main_quiz_page extends javax.swing.JFrame {
             }
         });
         
-        System.out.println(list_of_files.size());
-        System.out.println(unique_id);
+//        System.out.println(list_of_files.size());
+//        System.out.println(unique_id);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
