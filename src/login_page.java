@@ -59,7 +59,7 @@ public class login_page extends javax.swing.JFrame {
                 To_registerMouseClicked(evt);
             }
         });
-        getContentPane().add(To_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 70, 40));
+        getContentPane().add(To_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 170, 40));
 
         Login_text.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         Login_text.setText("LOGIN");

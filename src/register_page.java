@@ -99,16 +99,23 @@ public class register_page extends javax.swing.JFrame {
         {
             
         }
+        else
+        {
             String database_user = "root";
             String database_pass = "rootroot";
             String url = "jdbc:mysql://127.0.0.1:3306/server";
+            String users_url = "jdbc:mysql://127.0.0.1:3306/users";
             String Query = "Insert into users values ('"+unique_num+"','"+user+"','"+pass+"')";
+            String create_user = "CREATE TABLE user" + unique_num + "(game_number int PRIMARY KEY, amount_display varchar(50), category varchar(50), amount_count int )";
         try {
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connect = DriverManager.getConnection(url, database_user, database_pass);
-            Statement stmt = connect.createStatement();
-            stmt.executeUpdate(Query);
+            Connection user_data = DriverManager.getConnection(users_url,database_user,database_pass);
+            PreparedStatement stmt = connect.prepareStatement(Query);
+            PreparedStatement usr = user_data.prepareStatement(create_user);
+            stmt.execute();
+            usr.execute();
             this.dispose();
             new login_page().setVisible(true);
             
@@ -118,7 +125,7 @@ public class register_page extends javax.swing.JFrame {
             Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
         }
      
-        
+        }
         
     }//GEN-LAST:event_register_buttonActionPerformed
 

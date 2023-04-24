@@ -76,9 +76,9 @@ public class main_quiz_page extends javax.swing.JFrame {
     private static String url = "jdbc:mysql://127.0.0.1:3306/quiz";
     
     private static boolean next_question = false;   //using this to track next question change
-    final private static String[] prize = new String[]{"5,000","10,000","20,000","40,000","80,000","1.5 Lakh","7.5 Lakh","25 Lakh","50 Lakh","1 Crore","50 Crore","50 Arab","1 Kharab","50 Kharab","1 Neel"};
+    final private static String[] prize = new String[]{"0","5,000","10,000","20,000","40,000","80,000","1.5 Lakh","7.5 Lakh","25 Lakh","50 Lakh","75 Lakh","1 Crore","10 Crore","50 Crore","75 Crore","1 Arab"};
     private static int prize_count = 0;
-    private static int label = 1;
+    private static int label = 0;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -319,7 +319,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                     option_c.setText(rs.getString(5));
                     option_d.setText(rs.getString(6));
                     correct_answer = rs.getString(7).toUpperCase().charAt(0);
-                    money.setText(prize[prize_count++]);
+                    money.setText(prize[++prize_count]);
                     start_check = true;
                 }             
                 else
@@ -344,6 +344,16 @@ public class main_quiz_page extends javax.swing.JFrame {
             }
             else if(next_question == true)
             {
+                if(prize_count == 15)
+                {
+                    no.setVisible(false);
+                    String pint = "Congratulations! You have won 1 Arab! Continue to home page!";
+                    are_you_ready.setText("<html>" +pint+ "</html>");
+                    are_you_sure.setVisible(false);
+                    are_you_sure_option.setVisible(false);
+                }
+                else
+                {
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection connect = DriverManager.getConnection(url, database_user, database_pass);
@@ -375,10 +385,10 @@ public class main_quiz_page extends javax.swing.JFrame {
                     no.setVisible(true);
                     are_you_sure.setVisible(true);
                     are_you_sure_option.setVisible(true);
-                    money.setText(prize[prize_count++]);
+                    money.setText(prize[++prize_count]);
                     main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quiz_interface.png")));
                 }
-                
+                }
             }
             
             else if(chosen_option == correct_answer)
@@ -390,6 +400,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                 are_you_ready.setVisible(true);
                 are_you_ready.setText("Right Answer! Continue by pressing Yes");
                 
+                label++;
                 // switch for label shit
                 switch (label) {
                     case 1:
@@ -478,7 +489,6 @@ public class main_quiz_page extends javax.swing.JFrame {
                         break;
                 }
                 
-                label++;
                 next_question = true;
             }
             else
@@ -514,6 +524,104 @@ public class main_quiz_page extends javax.swing.JFrame {
     private void noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noActionPerformed
         if(start_check == false || game_on == false)
         {
+            int amount_int;
+            String amount_text = prize[prize_count];
+            switch (label) {
+                    case 0:
+                        amount_int = 0;
+                        break;
+                    case 1:
+                        amount_int = 5000;
+                        break;
+                     
+                    case 2:
+                        amount_int = 10000;
+                        break;
+                    
+                    case 3:
+                        amount_int = 20000;
+                        break;
+                     
+                    case 4:
+                        amount_int = 40000;
+                        break;
+                        
+                    case 5:
+                        amount_int = 80000;
+                        break;
+                     
+                    case 6:
+                        amount_int = 150000;
+                        break;
+                    
+                    case 7:
+                        amount_int = 750000;
+                        break;
+                     
+                    case 8:
+                        amount_int = 2500000;
+                        break;  
+                        
+                    case 9:
+                        amount_int = 5000000;
+                        break;
+                     
+                    case 10:
+                        amount_int = 7500000;
+                        break;
+                    
+                    case 11:
+                        amount_int = 10000000;
+                        break;
+                     
+                    case 12:
+                        amount_int = 100000000;
+                        break;
+                        
+                    case 13:
+                        amount_int = 500000000;
+                        break;
+                     
+                    case 14:
+                        amount_int = 750000000;
+                        break;
+                    
+                    case 15:
+                        amount_int = 1000000000;
+                        break;
+                     
+                    default:
+                        System.out.print("LABEL ERROR");
+                        amount_int = 0;
+                        break;   
+
+                }           
+            String update = "jdbc:mysql://127.0.0.1:3306/users";
+            String fetch = "select count(*) AS count from user"+unique_id;
+            
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection cnct = DriverManager.getConnection(update,database_user,database_pass);
+                Statement srt = cnct.createStatement();
+                ResultSet rs = srt.executeQuery(fetch);
+                if(rs.next())
+                {
+                    long num = rs.getLong("count");
+                    String query_update = "insert into user"+unique_id+" values("+num+","+amount_text+","+table_name+","+amount_int+")";
+                    PreparedStatement stt = cnct.prepareStatement(query_update);
+                    stt.execute();
+                }
+                else
+                {
+                
+                }
+                
+            }
+            catch (ClassNotFoundException ex) {
+            Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
+        }
             new quiz_page1(unique_id).setVisible(true);
             this.dispose();
         }
