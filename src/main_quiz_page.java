@@ -26,6 +26,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         initComponents();
         unique_id = abc;
         table_name = tablename;
+        Set <Integer> list_of_files = new HashSet<Integer>();
         Random random = new Random();
         while(list_of_files.size()<= 15)
         {
@@ -33,8 +34,25 @@ public class main_quiz_page extends javax.swing.JFrame {
             if(num!=0)  //error aara with 0 index. can't access sql table
                 {list_of_files.add(num);}
         }
-
+        
+        list = list_of_files.toArray();
+        
         are_you_sure.setVisible(false);
+        a1.setVisible(false);
+        a2.setVisible(false);
+        a3.setVisible(false);
+        a4.setVisible(false);
+        a5.setVisible(false);
+        a6.setVisible(false);
+        a7.setVisible(false);
+        a8.setVisible(false);
+        a9.setVisible(false);
+        a10.setVisible(false);
+        a11.setVisible(false);
+        a12.setVisible(false);
+        a13.setVisible(false);
+        a14.setVisible(false);
+        a15.setVisible(false);
         
         if("language".equals(table_name))
         {
@@ -42,17 +60,25 @@ public class main_quiz_page extends javax.swing.JFrame {
         }
     }
     
+    Object[] list = new Object[15];
+    int list_tracker = 0;
+    
     private static String unique_id,table_name;
-    private static Set <Integer> list_of_files = new HashSet<Integer>();
-    private Iterator i = list_of_files.iterator();
+    
     private static boolean start_check = false; //this is for shubh aahramb
     private static boolean game_on = true;  //this to check if galat ans or not
+    
     private static char correct_answer;
     private static char chosen_option;
+    
     private static String database_user = "root";
     private static String database_pass = "rootroot";
     private static String url = "jdbc:mysql://127.0.0.1:3306/quiz";
+    
     private static boolean next_question = false;   //using this to track next question change
+    final private static String[] prize = new String[]{"5,000","10,000","20,000","40,000","80,000","1.5 Lakh","7.5 Lakh","25 Lakh","50 Lakh","1 Crore","50 Crore","50 Arab","1 Kharab","50 Kharab","1 Neel"};
+    private static int prize_count = 0;
+    private static int label = 1;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -64,6 +90,21 @@ public class main_quiz_page extends javax.swing.JFrame {
         are_you_sure = new javax.swing.JLabel();
         yes = new javax.swing.JButton();
         no = new javax.swing.JButton();
+        a13 = new javax.swing.JLabel();
+        a14 = new javax.swing.JLabel();
+        a15 = new javax.swing.JLabel();
+        a9 = new javax.swing.JLabel();
+        a10 = new javax.swing.JLabel();
+        a11 = new javax.swing.JLabel();
+        a12 = new javax.swing.JLabel();
+        a5 = new javax.swing.JLabel();
+        a6 = new javax.swing.JLabel();
+        a7 = new javax.swing.JLabel();
+        a8 = new javax.swing.JLabel();
+        a4 = new javax.swing.JLabel();
+        a3 = new javax.swing.JLabel();
+        a2 = new javax.swing.JLabel();
+        a1 = new javax.swing.JLabel();
         money = new javax.swing.JLabel();
         option_d = new javax.swing.JLabel();
         option_c = new javax.swing.JLabel();
@@ -107,6 +148,81 @@ public class main_quiz_page extends javax.swing.JFrame {
         Confirm.add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 110, 50));
 
         getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 580, 400));
+
+        a13.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a13.setForeground(new java.awt.Color(255, 220, 18));
+        a13.setText(" |");
+        getContentPane().add(a13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 140, 40, 30));
+
+        a14.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a14.setForeground(new java.awt.Color(255, 220, 18));
+        a14.setText(" |");
+        getContentPane().add(a14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 90, 40, 30));
+
+        a15.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a15.setForeground(new java.awt.Color(255, 220, 18));
+        a15.setText(" |");
+        getContentPane().add(a15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 40, 40, 30));
+
+        a9.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a9.setForeground(new java.awt.Color(255, 220, 18));
+        a9.setText(" |");
+        getContentPane().add(a9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 340, 40, 30));
+
+        a10.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a10.setForeground(new java.awt.Color(255, 220, 18));
+        a10.setText(" |");
+        getContentPane().add(a10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 290, 40, 30));
+
+        a11.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a11.setForeground(new java.awt.Color(255, 220, 18));
+        a11.setText(" |");
+        getContentPane().add(a11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 240, 40, 30));
+
+        a12.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a12.setForeground(new java.awt.Color(255, 220, 18));
+        a12.setText(" |");
+        getContentPane().add(a12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 190, 40, 30));
+
+        a5.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a5.setForeground(new java.awt.Color(255, 220, 18));
+        a5.setText(" |");
+        getContentPane().add(a5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 540, 40, 30));
+
+        a6.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a6.setForeground(new java.awt.Color(255, 220, 18));
+        a6.setText(" |");
+        getContentPane().add(a6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 490, 40, 30));
+
+        a7.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a7.setForeground(new java.awt.Color(255, 220, 18));
+        a7.setText(" |");
+        getContentPane().add(a7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 440, 40, 30));
+
+        a8.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a8.setForeground(new java.awt.Color(255, 220, 18));
+        a8.setText(" |");
+        getContentPane().add(a8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 390, 40, 30));
+
+        a4.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a4.setForeground(new java.awt.Color(255, 220, 18));
+        a4.setText(" |");
+        getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 590, 40, 30));
+
+        a3.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a3.setForeground(new java.awt.Color(255, 220, 18));
+        a3.setText(" |");
+        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 640, 40, 30));
+
+        a2.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a2.setForeground(new java.awt.Color(255, 220, 18));
+        a2.setText(" |");
+        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 690, 40, 30));
+
+        a1.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
+        a1.setForeground(new java.awt.Color(255, 220, 18));
+        a1.setText(" |");
+        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 740, 40, 30));
 
         money.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         money.setForeground(new java.awt.Color(255, 255, 255));
@@ -161,7 +277,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         Question_label.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Question_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 920, 120));
 
-        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quiz_interface,png.png"))); // NOI18N
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quiz_interface.png"))); // NOI18N
         main_background.setText("asdas");
         getContentPane().add(main_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 1, 1500, 800));
 
@@ -185,8 +301,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                         try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection connect = DriverManager.getConnection(url, database_user, database_pass);
-                main_quiz_page ob = new main_quiz_page(unique_id,table_name);
-                int fist = (Integer)ob.i.next();
+                int fist = (Integer)list[list_tracker++];
                 int first = fist;
                 String query = "select * from "+table_name+" where id ="+first;
                 PreparedStatement stmt = connect.prepareStatement(query);
@@ -201,6 +316,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                     option_c.setText(rs.getString(5));
                     option_d.setText(rs.getString(6));
                     correct_answer = rs.getString(7).toUpperCase().charAt(0);
+                    money.setText(prize[prize_count++]);
                     start_check = true;
                 }             
                 else
@@ -227,8 +343,10 @@ public class main_quiz_page extends javax.swing.JFrame {
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection connect = DriverManager.getConnection(url, database_user, database_pass);
-                    int next_option = (int) i.next();
+                    int next_option = (Integer)list[list_tracker++];
                     String query = "select * from"+table_name+"where id ="+next_option;
+                    money.setText(prize[prize_count++]);
+                    
                     
                     
                     
@@ -251,6 +369,74 @@ public class main_quiz_page extends javax.swing.JFrame {
                 are_you_sure_option.setVisible(false);
                 are_you_ready.setVisible(true);
                 are_you_ready.setText("Right Answer! Continue by pressing Yes");
+                switch (label) {
+                    case 1:
+                        a1.setVisible(true);
+                        break;
+                     
+                    case 2:
+                        a2.setVisible(true);
+                        break;
+                    
+                    case 3:
+                        a3.setVisible(true);
+                        break;
+                     
+                    case 4:
+                        a4.setVisible(true);
+                        break;
+                        
+                    case 5:
+                        a5.setVisible(true);
+                        break;
+                     
+                    case 6:
+                        a6.setVisible(true);
+                        break;
+                    
+                    case 7:
+                        a7.setVisible(true);
+                        break;
+                     
+                    case 8:
+                        a8.setVisible(true);
+                        break;  
+                        
+                    case 9:
+                        a9.setVisible(true);
+                        break;
+                     
+                    case 10:
+                        a10.setVisible(true);
+                        break;
+                    
+                    case 11:
+                        a11.setVisible(true);
+                        break;
+                     
+                    case 12:
+                        a12.setVisible(true);
+                        break;
+                        
+                    case 13:
+                        a13.setVisible(true);
+                        break;
+                     
+                    case 14:
+                        a14.setVisible(true);
+                        break;
+                    
+                    case 15:
+                        a15.setVisible(true);
+                        break;
+                     
+                    default:
+                        System.out.print("LABEL ERROR");
+                        break;   
+
+                }
+                
+                label++;
                 next_question = true;
             }
             else
@@ -335,6 +521,21 @@ public class main_quiz_page extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Confirm;
     private javax.swing.JLabel Question_label;
+    private javax.swing.JLabel a1;
+    private javax.swing.JLabel a10;
+    private javax.swing.JLabel a11;
+    private javax.swing.JLabel a12;
+    private javax.swing.JLabel a13;
+    private javax.swing.JLabel a14;
+    private javax.swing.JLabel a15;
+    private javax.swing.JLabel a2;
+    private javax.swing.JLabel a3;
+    private javax.swing.JLabel a4;
+    private javax.swing.JLabel a5;
+    private javax.swing.JLabel a6;
+    private javax.swing.JLabel a7;
+    private javax.swing.JLabel a8;
+    private javax.swing.JLabel a9;
     private javax.swing.JLabel are_you_ready;
     private javax.swing.JLabel are_you_sure;
     private javax.swing.JLabel are_you_sure_option;
