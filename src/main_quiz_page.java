@@ -124,8 +124,9 @@ public class main_quiz_page extends javax.swing.JFrame {
         Confirm.add(are_you_sure_option, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 40, 80));
 
         are_you_ready.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        are_you_ready.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         are_you_ready.setText("Are you ready to start the game?");
-        Confirm.add(are_you_ready, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+        Confirm.add(are_you_ready, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 120, 570, -1));
 
         are_you_sure.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         are_you_sure.setText("Are you sure you want to select Option :");
@@ -150,78 +151,78 @@ public class main_quiz_page extends javax.swing.JFrame {
         getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 580, 400));
 
         a13.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a13.setForeground(new java.awt.Color(255, 220, 18));
-        a13.setText(" |");
+        a13.setForeground(new java.awt.Color(255, 0, 0));
+        a13.setText("|||");
         getContentPane().add(a13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 140, 40, 30));
 
         a14.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a14.setForeground(new java.awt.Color(255, 220, 18));
-        a14.setText(" |");
+        a14.setForeground(new java.awt.Color(255, 0, 0));
+        a14.setText("|||");
         getContentPane().add(a14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 90, 40, 30));
 
         a15.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a15.setForeground(new java.awt.Color(255, 220, 18));
-        a15.setText(" |");
+        a15.setForeground(new java.awt.Color(255, 0, 0));
+        a15.setText("|||");
         getContentPane().add(a15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 40, 40, 30));
 
         a9.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a9.setForeground(new java.awt.Color(255, 220, 18));
-        a9.setText(" |");
+        a9.setForeground(new java.awt.Color(255, 0, 0));
+        a9.setText("|||");
         getContentPane().add(a9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 340, 40, 30));
 
         a10.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a10.setForeground(new java.awt.Color(255, 220, 18));
-        a10.setText(" |");
+        a10.setForeground(new java.awt.Color(255, 0, 0));
+        a10.setText("|||");
         getContentPane().add(a10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 290, 40, 30));
 
         a11.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a11.setForeground(new java.awt.Color(255, 220, 18));
-        a11.setText(" |");
+        a11.setForeground(new java.awt.Color(255, 0, 0));
+        a11.setText("|||");
         getContentPane().add(a11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 240, 40, 30));
 
         a12.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a12.setForeground(new java.awt.Color(255, 220, 18));
-        a12.setText(" |");
+        a12.setForeground(new java.awt.Color(255, 0, 0));
+        a12.setText("|||");
         getContentPane().add(a12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 190, 40, 30));
 
         a5.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a5.setForeground(new java.awt.Color(255, 220, 18));
-        a5.setText(" |");
+        a5.setForeground(new java.awt.Color(255, 0, 0));
+        a5.setText("|||");
         getContentPane().add(a5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 540, 40, 30));
 
         a6.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a6.setForeground(new java.awt.Color(255, 220, 18));
-        a6.setText(" |");
+        a6.setForeground(new java.awt.Color(255, 0, 0));
+        a6.setText("|||");
         getContentPane().add(a6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 490, 40, 30));
 
         a7.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a7.setForeground(new java.awt.Color(255, 220, 18));
-        a7.setText(" |");
+        a7.setForeground(new java.awt.Color(255, 0, 0));
+        a7.setText("|||");
         getContentPane().add(a7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 440, 40, 30));
 
         a8.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a8.setForeground(new java.awt.Color(255, 220, 18));
-        a8.setText(" |");
+        a8.setForeground(new java.awt.Color(255, 0, 0));
+        a8.setText("|||");
         getContentPane().add(a8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 390, 40, 30));
 
         a4.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a4.setForeground(new java.awt.Color(255, 220, 18));
-        a4.setText(" |");
+        a4.setForeground(new java.awt.Color(255, 0, 0));
+        a4.setText("|||");
         getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 590, 40, 30));
 
         a3.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a3.setForeground(new java.awt.Color(255, 220, 18));
-        a3.setText(" |");
+        a3.setForeground(new java.awt.Color(255, 0, 0));
+        a3.setText("|||");
         getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 640, 40, 30));
 
         a2.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a2.setForeground(new java.awt.Color(255, 220, 18));
-        a2.setText(" |");
+        a2.setForeground(new java.awt.Color(255, 0, 0));
+        a2.setText("|||");
         getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 690, 40, 30));
 
         a1.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
-        a1.setForeground(new java.awt.Color(255, 220, 18));
-        a1.setText(" |");
+        a1.setForeground(new java.awt.Color(255, 0, 0));
+        a1.setText("|||");
         getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 740, 40, 30));
 
         money.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
@@ -277,6 +278,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         Question_label.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Question_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 920, 120));
 
+        main_background.setForeground(new java.awt.Color(255, 0, 0));
         main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quiz_interface.png"))); // NOI18N
         main_background.setText("asdas");
         getContentPane().add(main_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 1, 1500, 800));
@@ -287,6 +289,8 @@ public class main_quiz_page extends javax.swing.JFrame {
     private void option_aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_option_aMouseClicked
         chosen_option = 'A';
         are_you_sure_option.setText(Character.toString(chosen_option));
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/select_a.png")));
+        are_you_sure_option.setVisible(true);
         are_you_sure.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_aMouseClicked
@@ -301,8 +305,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                         try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection connect = DriverManager.getConnection(url, database_user, database_pass);
-                int fist = (Integer)list[list_tracker++];
-                int first = fist;
+                int first = (Integer)list[list_tracker++];
                 String query = "select * from "+table_name+" where id ="+first;
                 PreparedStatement stmt = connect.prepareStatement(query);
                 ResultSet rs = stmt.executeQuery();
@@ -335,6 +338,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         {
             if(game_on == false)
             {
+                // add karo push ka code to datbase
                 new main_quiz_page(unique_id,table_name).setVisible(true);
                 this.dispose();
             }
@@ -344,10 +348,24 @@ public class main_quiz_page extends javax.swing.JFrame {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection connect = DriverManager.getConnection(url, database_user, database_pass);
                     int next_option = (Integer)list[list_tracker++];
-                    String query = "select * from"+table_name+"where id ="+next_option;
-                    money.setText(prize[prize_count++]);
-                    
-                    
+                    String query = "select * from "+table_name+" where id ="+next_option;
+                    PreparedStatement stmt = connect.prepareStatement(query);
+                    ResultSet rs = stmt.executeQuery();
+                    Confirm.setVisible(false);
+                    are_you_ready.setVisible(false);
+                    if(rs.next())
+                    {
+                        Question_label.setText("<html>" + rs.getString(2)+ "</html>");
+                        option_a.setText(rs.getString(3));
+                        option_b.setText(rs.getString(4));
+                        option_c.setText(rs.getString(5));
+                        option_d.setText(rs.getString(6));
+                        correct_answer = rs.getString(7).toUpperCase().charAt(0);
+                    }
+                    else
+                    {
+                        System.out.println("SQL ERROR AFTER 1st QUESTION");
+                    }           
                     
                     
                 } catch (ClassNotFoundException | SQLException ex) {
@@ -357,6 +375,8 @@ public class main_quiz_page extends javax.swing.JFrame {
                     no.setVisible(true);
                     are_you_sure.setVisible(true);
                     are_you_sure_option.setVisible(true);
+                    money.setText(prize[prize_count++]);
+                    main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quiz_interface.png")));
                 }
                 
             }
@@ -369,71 +389,93 @@ public class main_quiz_page extends javax.swing.JFrame {
                 are_you_sure_option.setVisible(false);
                 are_you_ready.setVisible(true);
                 are_you_ready.setText("Right Answer! Continue by pressing Yes");
+                
+                // switch for label shit
                 switch (label) {
                     case 1:
-                        a1.setVisible(true);
+                        a1.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 2:
-                        a2.setVisible(true);
+                        a2.setForeground(new java.awt.Color(0,255,0));
                         break;
                     
                     case 3:
-                        a3.setVisible(true);
+                        a3.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 4:
-                        a4.setVisible(true);
+                        a4.setForeground(new java.awt.Color(0,255,0));
                         break;
                         
                     case 5:
-                        a5.setVisible(true);
+                        a5.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 6:
-                        a6.setVisible(true);
+                        a6.setForeground(new java.awt.Color(0,255,0));
                         break;
                     
                     case 7:
-                        a7.setVisible(true);
+                        a7.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 8:
-                        a8.setVisible(true);
+                        a8.setForeground(new java.awt.Color(0,255,0));
                         break;  
                         
                     case 9:
-                        a9.setVisible(true);
+                        a9.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 10:
-                        a10.setVisible(true);
+                        a10.setForeground(new java.awt.Color(0,255,0));
                         break;
                     
                     case 11:
-                        a11.setVisible(true);
+                        a11.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 12:
-                        a12.setVisible(true);
+                        a12.setForeground(new java.awt.Color(0,255,0));
                         break;
                         
                     case 13:
-                        a13.setVisible(true);
+                        a13.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     case 14:
-                        a14.setVisible(true);
+                        a14.setForeground(new java.awt.Color(0,255,0));
                         break;
                     
                     case 15:
-                        a15.setVisible(true);
+                        a15.setForeground(new java.awt.Color(0,255,0));
                         break;
                      
                     default:
                         System.out.print("LABEL ERROR");
                         break;   
 
+                }
+                
+                //swicth for correct ans
+                switch(chosen_option)
+                {
+                    case 'A':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/correct_a.png")));
+                        break;
+                    
+                    case 'B':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/correct_b.png")));
+                        break;
+                        
+                    case 'C':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/correct_c.png")));
+                        break;
+                        
+                    case 'D':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/correct_d.png")));
+                        break;
                 }
                 
                 label++;
@@ -443,7 +485,26 @@ public class main_quiz_page extends javax.swing.JFrame {
             {
                 are_you_sure.setVisible(false);
                 are_you_sure_option.setVisible(false);
+                are_you_ready.setVisible(true);
                 are_you_ready.setText("Wrong Answer! Try again?");
+                switch(chosen_option)
+                {
+                    case 'A':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wrong_a.png")));
+                        break;
+                    
+                    case 'B':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wrong_b.png")));
+                        break;
+                        
+                    case 'C':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wrong_c.png")));
+                        break;
+                        
+                    case 'D':
+                        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wrong_d.png")));
+                        break;
+                }
                 game_on = false;
 
             }
@@ -466,6 +527,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         chosen_option = 'B';
         are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/select_b.png")));
         are_you_sure_option.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_bMouseClicked
@@ -474,6 +536,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         chosen_option = 'C';
         are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/select_c.png")));
         are_you_sure_option.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_cMouseClicked
@@ -482,6 +545,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         chosen_option = 'D';
         are_you_sure.setVisible(true);
         are_you_sure_option.setText(Character.toString(chosen_option));
+        main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/select_d.png")));
         are_you_sure_option.setVisible(true);
         Confirm.setVisible(true);
     }//GEN-LAST:event_option_dMouseClicked
