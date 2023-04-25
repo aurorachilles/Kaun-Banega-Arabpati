@@ -1,32 +1,35 @@
+@whole interface me
+
+s - 14
 All quiz types:
 
 * Sport 
-	General (every sports)
-	Olympics (only olympics, winners, dates etc)
+General (every sports) S
+Olympics (only olympics, winners, dates etc) S
 * Geography
-	World
-	India
+World S
+India (S)
 * History
-	Indian
-	European
-	Asian 
-	Roman
+Indian S
+European U
+Asian U
+RomanU
 * Movies
-	Bollywood
-	Hollywood
+Bollywood U
+Hollywood U
 * Science
-	Astronomy (planets etc)
-	Inventors and Inventions (inventions and name of inventors)
-	Biology 
-	General
+Astronomy (planets etc) (S)
+Inventors and Inventions (inventions and name of inventors) S
+Biology S
+General Science S
 * Pop-Culture
-	Celebrities
+Celebrities S
 	TV Shoes (Friends, The Office, etc)
 * Language
 	Guess the language (guess from letters)
 * Literature
-	Books and authors	
-	Awards
+Books and authors	S
+Awards (s)
 * Automobiles
 	Cars
 	Bikes
@@ -35,10 +38,10 @@ All quiz types:
 	Geopolitics
 	Politics in India
 	United Nations
-	Noble Prizes
+	Noble Prizes 
 * Misc
 	National Food of countries
 	National Animal of Countries
-	General Knowledge
-	Companies and TagLine
+General Knowledge S
+Companies and TagLine s
 	

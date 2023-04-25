@@ -1,0 +1,55 @@
+
+create table Astronomy (
+id int PRIMARY KEY NOT NULL,
+question varchar(750) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+drop table Astronomy;
+
+insert into Astronomy values(1,'What is the largest planet in our solar system?' , ' Jupiter' , ' Saturn' , ' Mars ' , ' Earth' , 'A') ,
+(2,'What is the name of the first man-made satellite launched into space?' , ' Apollo 11' , ' Voyager 1' , ' Sputnik 1 ' , ' Hubble Space Telescope' , 'C') ,
+(3,'What is the term used to describe the time it takes for Earth to complete one orbit around the Sun?' , ' Year' , ' Month' , ' Day ' , ' Hour' , 'A') ,
+(4,'Which planet is known as the "Red Planet"?' , ' Venus' , ' Mars' , ' Neptune ' , ' Jupiter' , 'B') ,
+(5,'What is the process by which a star converts hydrogen into helium, releasing a tremendous amount of energy in the process?' , ' Fusion' , ' Fission' , ' Conduction ' , ' Radiation' , 'A') ,
+(6,'What is the name of the galaxy that contains our solar system?' , ' Andromeda' , ' Milky Way' , ' Triangulum ' , ' Sombrero' , 'B') ,
+(7,'Which planet has the largest number of moons?' , ' Mars' , ' Saturn' , ' Uranus ' , ' Neptune' , 'B') ,
+(8,'What is the name of the phenomenon where the Moon passes between the Sun and the Earth, casting a shadow on the Earth surface?' , ' Solar eclipse' , ' Lunar eclipse' , ' Total eclipse ' , ' Partial eclipse' , 'A') ,
+(9,'What is the name of the spacecraft that successfully landed on Mars in 2021, searching for signs of past microbial life?' , ' Opportunity' , ' Spirit' , ' Perseverance ' , ' Curiosity' , 'C') ,
+(10,'What is the name of the closest star to Earth, other than the Sun?' , ' Alpha Centauri' , ' Proxima Centauri' , ' Betelgeuse ' , ' Polaris' , 'B') ,
+(11,'Which planet has the longest day in our solar system?' , ' Venus' , ' Mars' , ' Saturn ' , ' Jupiter' , 'A') ,
+(12,'What is the name of the largest moon of Saturn?' , ' Titan' , ' Ganymede' , ' Europa ' , ' Triton' , 'A') ,
+(13,'What is the phenomenon where a star suddenly increases in brightness before fading back to its original brightness?' , ' Supernova' , ' Black hole' , ' Comet ' , ' Nova' , 'D') ,
+(14,'Which planet has the most pronounced ring system in our solar system?' , ' Venus' , ' Mars' , ' Saturn ' , ' Uranus' , 'C') ,
+(15,'What is the name of the telescope that was launched in 1990 and is still in operation, providing stunning images of the universe?' , ' Kepler Space Telescope' , ' Hubble Space Telescope' , ' James Webb Space Telescope ' , ' Chandra X-ray Observatory' , 'B') ,
+(16,'What is the name of the region of space where light cannot escape due to the immense gravitational pull of a massive object?' , ' Nebula' , ' Quasar' , ' Supernova ' , ' Black hole' , 'D') ,
+(17,'What is the name of the brightest star in our night sky?' , ' Sirius' , ' Polaris' , ' Vega ' , ' Betelgeuse' , 'A') ,
+(18,'What is the term used to describe a group of stars that form a recognizable pattern and have a name associated with them?' , ' Galaxy' , ' Solar system' , ' Constellation ' , ' Cluster' , 'C') ,
+(19,'What is the name of the phenomenon where a planet appears to reverse its direction of motion in the sky?' , ' Comet' , ' Supernova' , ' Retrograde motion ' , ' Equinox' , 'C') ,
+(20,'What is the name of the force that holds planets in orbit around the Sun?' , ' Gravity' , ' Electromagnetic force' , ' Nuclear force ' , ' Weak force' , 'A') ,
+(21,'What is the name of the spacecraft that successfully landed on the surface of a comet in 2014?' , ' Rosetta' , ' Voyager 1' , ' Juno ' , ' New Horizons' , 'A') ,
+(22,'What is the name of the largest moon of Neptune?' , ' Callisto' , ' Titan' , ' Triton ' , ' Europa' , 'C') ,
+(23,'What is the name of the process by which a star dies in a violent explosion, releasing an enormous amount of energy?' , ' Supernova' , ' Nebula' , ' Comet ' , ' Quasar' , 'A') ,
+(24,'Which planet is known as the "Morning Star" or "Evening Star" due to its bright appearance in the sky?' , ' Mars' , ' Venus' , ' Saturn ' , ' Jupiter' , 'B') ,
+(25,'What is the name of the first human spaceflight program by NASA?' , ' Apollo' , ' Gemini' , ' Mercury ' , ' Skylab' , 'C') ,
+(26,'What is the name of the spacecraft that successfully landed on the surface of Mars in 2004 and operated for over 14 years?' , ' Opportunity' , ' Spirit' , ' Perseverance ' , ' Curiosity' , 'A') ,
+(27,'What is the name of the phenomenon where the Moon passes through the Earth shadow, causing a reddish hue to the Moon?' , ' Solar eclipse' , ' Lunar eclipse' , ' Total eclipse ' , ' Partial eclipse' , 'B') ,
+(28,'What is the name of the planet that is known for its beautiful rings made up of ice particles?' , ' Venus' , ' Mars' , ' Saturn ' , ' Uranus' , 'C') ,
+(29,'What is the name of the process by which a planet or moon is illuminated by the Sun and appears to glow in the darkness?' , ' Reflection' , ' Refraction' , ' Scattering ' , ' Absorption' , 'A') ,
+(30,'What is the name of the region of space between Mars and Jupiter that contains many small celestial bodies, often referred to as "minor planets" or "planetoids"?' , ' Asteroid belt' , ' Kuiper belt' , ' Oort cloud ' , ' Comets' , 'A') ,
+(31,'What is the name of the spacecraft that was launched in 2018 with the goal of studying the Sun up close?' , ' Solar Probe Plus' , ' Juno' , ' Cassini ' , ' Dawn' , 'A') ,
+(32,'What is the name of the process by which a star converts hydrogen into helium in its core, releasing tremendous amounts of energy?' , ' Fusion' , ' Fission' , ' Condensation ' , ' Sublimation' , 'A') ,
+(33,'Which of the following is NOT a type of galaxy?' , ' Spiral' , ' Elliptical' , ' Nebula ' , ' Irregular' , 'C') ,
+(34,'What is the name of the phenomenon where a planet passes in front of a star, causing a temporary decrease in the stars brightness?' , ' Eclipse' , ' Transit' , ' Occultation ' , ' Retrograde' , 'B') ,
+(35,'What is the name of the constellation that includes the North Star (Polaris)?' , ' Ursa Major' , ' Draco' , ' Cassiopeia ' , ' Orion' , 'A') ,
+(36,'What is the name of the phenomenon where a star collapses under its own gravity and becomes incredibly dense?' , ' Supernova' , ' Nebula' , ' White dwarf ' , ' Black hole' , 'D') ,
+(37,'What is the name of the largest planet in our solar system?' , ' Venus' , ' Mars' , ' Jupiter ' , ' Uranus' , 'C') ,
+(38,'What is the name of the nearest galaxy to our Milky Way galaxy?' , ' Andromeda' , ' Triangulum' , ' Centaurus A ' , ' Sombrero' , 'A') ,
+(39,'What is the name of the phenomenon where a meteoroid enters Earth atmosphere and burns up, creating a streak of light in the sky?' , ' Meteor' , ' Comet' , ' Meteorite ' , ' Asteroid' , 'A') ,
+(40,'What is the name of the process by which a planet, moon, or other celestial body moves in an elliptical orbit around another object?' , ' Revolution' , ' Rotation' , ' Retrograde ' , ' Refraction' , 'A') ;
+
+
+select * from Astronomy where id = 40;

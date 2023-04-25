@@ -1,0 +1,55 @@
+create table Europian_History (
+id int PRIMARY KEY NOT NULL,
+question varchar(750) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+drop table Europian_History;
+
+insert into Europian_History values (1,'In which year did the Childrens Crusade take place?' , ' 1300' , ' 1250' , ' 1283' , ' 1212' , 'D') ,
+(2,'What is the name of the British art historian who was also a Soviet spy?' , 'Bernard Ashmole ' , 'Anthony Blunt' , ' Michael Baxandall ' , ' Stephen Bann' , 'B') ,
+(3,'Who called for the Albigensian Crusade against the Cathari?' , ' Pope Innocent III' , ' Pope Gregory IX' , ' Pope Honorius III ' , ' Pope Boniface VIII' , 'A') ,
+(4,' Which is the extinct wild ox of Europe?' , 'Banteng' , ' Kouprey' , ' Aurochs ' , ' Gaur' , 'C') ,
+(5,'Which battle resulted in Christianity as the official religion of the Roman Empire?' , ' Battle of Pollentia' , ' Battle of Frigidus River' , ' Battle of Milvian Bridge ' , ' Battle of Narbonne' , 'C') ,
+(6,'What does the term "cist" refer to in prehistoric Europe?' , ' House or tent' , ' Sword or dagger' , ' Coffin or burial place ' , ' Well or cistern' , 'C') ,
+(7,'What disease was the probable cause of the Black Death?' , ' Influenza' , ' Syphilis' , ' Smallpox ' , ' Plague' , 'D') ,
+(8,'What is English admiral Sir Francis Drake famous for?' , ' Discovery of Northwest Passage' , ' Navigation of St. Lawrence river' , ' Discovery of Quebec ' , ' Circumnavigation of the globe' , 'D') ,
+(9,'In which year did Moldova gain its independence?' , ' 1998' , ' 1991' , ' 1912 ' , ' 1877' , 'B') ,
+(10,'Which of these peoples once ruled Norway?' , ' Vikings' , ' Irish' , ' Aztecs ' , ' Romans' , 'A') ,
+(11,'Which of these battles involved Huns?' , 'Chancellorsville' , ' Caerphilly' , ' Cannae ' , '  Chalons' , 'D') ,
+(12,'Which is the oldest university in Europe?' , ' University of Oxford' , 'University of Padua' , ' University of Salamanca ' , ' University of Bologna' , 'D') ,
+(13,'What is the name of the earliest European vernacular epic?' , ' Beowulf' , ' Prose Edda' , ' Kalevala ' , ' Epic of Gilgamesh' , 'A') ,
+(14,'In which year did the Great Smog of London occur?' , ' 1947' , ' 1955' , ' 1960 ' , ' 1952' , 'D') ,
+(15,' When did the Chernobyl disaster take place?' , ' 1986' , ' 1979' , '1982 ' , '1997' , 'A') ,
+(16,'What is the name of the megalithic monument located on the Salisbury Plain, England, that was built between 3000 and 1520 BCE?' , ' Stonehenge' , ' Uffington White Horse' , ' Giant’s Causeway ' , ' Skara Brae' , 'A') ,
+(17,'Which of the following are archaic humans named for the valley in Germany where their fossils were first discovered?' , ' Cro-Magnons' , ' Denisovans' , ' Homo rudolfensis' , ' Neanderthals' , 'D') ,
+(18,'Who was the first woman to be elected to the British Parliament?' , ' Nancy Astor' , ' Mary Hamilton' , ' Susan Lawrence ' , ' Constance Markievicz' , 'D') ,
+(19,'What conspiracy was a plot to kill King James I and to blow up Englands Parliament?' , ' Gunpower Plot' , ' Mornay Plot' , ' Bye Plot ' , ' Throckmorton Plot' , 'A') ,
+(20,'What was the preeminent European intellectual movement of the 17th and 18th centuries?' , ' East West Schism' , ' Romanticism' , ' Enlightenment ' , ' Utilitarianism' , 'C') ,
+(21,'The sinking of which of the following ships is considered the greatest maritime disaster of all time?' , ' Wilhelm Gustloff ' , ' Titanic' , ' Lusitania' , ' Britannic' , 'A') ,
+(22,'Which treaty divided the Carolingian Empire?' , ' Treaty of Meerssen ' , ' Treaty of Brétigny' , ' Treaty of Verdun ' , ' Treaty of Stolbovo' , 'C') ,
+(23,'The Industrial Revolution began in which European country?' , ' Great Britan' , ' Italy' , ' Belgium ' , ' Norway' , 'A') ,
+(24,'What mysterious disease was an epidemic that struck England and continental Europe in 1485, 1508, 1517, 1528, and 1551, then disappeared??' , ' Smallpox' , ' Cholera' , ' Influenza ' , ' Sweating sickness' , 'D') ,
+(25,'What system of education originated in Italy during the 13th and 14th centuries?' , ' Humanism' , ' Anthropology' , ' Montessori schools ' , ' Archaeology' , 'A') ,
+(26,'What incident happened during a football (soccer) match in England in 1989?' , ' Luzhniki Diseater' , ' Burnden Park Disaster' , ' Estadio Natural Disaster ' , ' Hillsborough Disaster' , 'D') ,
+(27,'What is the name of the queen who led the revolt against Roman rule?' , ' Boudicca' , ' Marcia' , ' Anne ' , ' Cartimandua' , 'A') ,
+(28,'Which revolution dethroned King James II of England?' , ' Young Turk Revolution' , ' October Revolution' , ' Glorious Revolution ' , ' Brabant Revolution' , 'C') ,
+(29,'Who formed the secret society called ‘Young Italy’?' , ' Francesco Crispi' , ' Vincenzo Gioberti' , ' Camillo Cavour ' , ' Giuseppe Mazzini' , 'D') ,
+(30,'Which battle marked the end of the Teutonic Order expansion at the Baltic Sea?' , ' Battle of the Neva' , ' Battle of the Sit River' , ' Battle of Grunwald ' , ' Battle of Kulikovo' , 'C') ,
+(31,'Who is known as the "Maid of Orléans"?' , ' MArie Antoinette' , ' Therese of Lisieux ' , ' St.Joan of Arc ' , ' Eleanor of Aquitaine' , 'C') ,
+(32,'Which term refers to the movement of so-called barbarian peoples in Europe between about 500 and 1000?' , ' Crusades' , ' Great Migration' , ' Migration period ' , ' Reformation' , 'C') ,
+(33,'Which European states united to form the Union of Lublin?' , ' Germany and Denmark' , ' Estonia and Latvia' , ' Poland and lithuania ' , ' Austria and Switzerland' , 'C') ,
+(34,'Which Roman emperor built the Segovia aqueduct?' , ' Marcus Aurelius' , ' Trajan' , ' Hadrian ' , ' Claudius' , 'B') ,
+(35,'When did Switzerland officially gain its independence?' , ' 1648' , ' 1798' , ' 1708 ' , ' 1688' , 'A') ,
+(36,'Who became the first king of a united Italy in 1861?' , ' Victor Emmannuel II' , ' Umberto I' , ' Napoleon I ' , ' Arduin of Ivrea' , 'A') ,
+(37,'Who was the first European to land in North America?' , ' Christopher Columbus' , ' Leif Erikosn' , ' Marco Polo ' , ' Ferdinand Magellan' , 'B') ,
+(38,'What is the name of the first of the ancient Roman roads?' , ' Via Augusta' , ' Via Appia' , ' Via Egnatia ' , ' Via Aurelia' , 'B') ,
+(39,'What compromise settled the dispute between Pope Calixtus II and Henry V?' , 'Treaty of San Germano ' , 'Declaration of Rhens ' , 'Concordat of Worms ' , ' Lateran Treaty' , 'C') ,
+(40,'Who was the architect who rebuilt London after the Great Fire of 1666?' , ' Christopher Columbus' , ' I.M. Pei' , ' Sir Christopher Wren ' , ' Sir Christopher Robin' , 'C');
+
+
+
+select * from Europian_History where id = 40;

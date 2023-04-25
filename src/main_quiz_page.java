@@ -38,21 +38,6 @@ public class main_quiz_page extends javax.swing.JFrame {
         list = list_of_files.toArray();
         
         are_you_sure.setVisible(false);
-        a1.setVisible(false);
-        a2.setVisible(false);
-        a3.setVisible(false);
-        a4.setVisible(false);
-        a5.setVisible(false);
-        a6.setVisible(false);
-        a7.setVisible(false);
-        a8.setVisible(false);
-        a9.setVisible(false);
-        a10.setVisible(false);
-        a11.setVisible(false);
-        a12.setVisible(false);
-        a13.setVisible(false);
-        a14.setVisible(false);
-        a15.setVisible(false);
         
         if("language".equals(table_name))
         {
@@ -339,6 +324,104 @@ public class main_quiz_page extends javax.swing.JFrame {
             if(game_on == false)
             {
                 // add karo push ka code to datbase
+                        int amount_int;
+                            String amount_text = prize[prize_count-1];
+                            switch (label) {
+                            case 0:
+                                amount_int = 0;
+                                break;
+                            case 1:
+                                amount_int = 5000;
+                                break;
+
+                            case 2:
+                                amount_int = 10000;
+                                break;
+
+                            case 3:
+                                amount_int = 20000;
+                                break;
+
+                            case 4:
+                                amount_int = 40000;
+                                break;
+
+                            case 5:
+                                amount_int = 80000;
+                                break;
+
+                            case 6:
+                                amount_int = 150000;
+                                break;
+
+                            case 7:
+                                amount_int = 750000;
+                                break;
+
+                            case 8:
+                                amount_int = 2500000;
+                                break;  
+
+                            case 9:
+                                amount_int = 5000000;
+                                break;
+
+                            case 10:
+                                amount_int = 7500000;
+                                break;
+
+                            case 11:
+                                amount_int = 10000000;
+                                break;
+
+                            case 12:
+                                amount_int = 100000000;
+                                break;
+
+                            case 13:
+                                amount_int = 500000000;
+                                break;
+
+                            case 14:
+                                amount_int = 750000000;
+                                break;
+
+                            case 15:
+                                amount_int = 1000000000;
+                                break;
+
+                            default:
+                                System.out.print("LABEL ERROR");
+                                amount_int = 0;
+                                break;   
+
+                        }           
+                    String update = "jdbc:mysql://127.0.0.1:3306/users";
+                    String fetch = "select count(*) AS count from user"+unique_id;
+
+                    try{
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                        Connection cnct = DriverManager.getConnection(update,database_user,database_pass);
+                        Statement srt = cnct.createStatement();
+                        ResultSet rs = srt.executeQuery(fetch);
+                        if(rs.next())
+                        {
+                            long num = rs.getLong("count");
+                            String query_update = "insert into user"+unique_id+" values('"+num+"','"+amount_text+"','"+table_name+"','"+amount_int+"')";
+                            PreparedStatement stt = cnct.prepareStatement(query_update);
+                            stt.execute();
+                        }
+                        else
+                        {
+
+                        }
+
+                    }
+                    catch (ClassNotFoundException ex) {
+                    Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 new main_quiz_page(unique_id,table_name).setVisible(true);
                 this.dispose();
             }
@@ -351,6 +434,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                     are_you_ready.setText("<html>" +pint+ "</html>");
                     are_you_sure.setVisible(false);
                     are_you_sure_option.setVisible(false);
+                    game_on = false;
                 }
                 else
                 {
@@ -525,7 +609,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         if(start_check == false || game_on == false)
         {
             int amount_int;
-            String amount_text = prize[prize_count];
+            String amount_text = prize[prize_count-1];
             switch (label) {
                     case 0:
                         amount_int = 0;
@@ -607,7 +691,7 @@ public class main_quiz_page extends javax.swing.JFrame {
                 if(rs.next())
                 {
                     long num = rs.getLong("count");
-                    String query_update = "insert into user"+unique_id+" values("+num+","+amount_text+","+table_name+","+amount_int+")";
+                    String query_update = "insert into user"+unique_id+" values('"+num+"','"+amount_text+"','"+table_name+"','"+amount_int+"')";
                     PreparedStatement stt = cnct.prepareStatement(query_update);
                     stt.execute();
                 }

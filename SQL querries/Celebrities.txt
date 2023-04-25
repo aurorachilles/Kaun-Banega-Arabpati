@@ -1,0 +1,55 @@
+create table Celebrities (
+id int PRIMARY KEY NOT NULL,
+question varchar(750) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+drop table Celebrities;
+
+insert into Celebrities values (1,'Who is known as the "Queen of Pop"?' , 'Britney Spears' , 'Lady Gaga' , 'Madonna ' , 'Beyoncé' , 'C') ,
+(2,'Which actor starred in the "Mission: Impossible" film series?' , 'Brad Pitt' , 'Tom Hanks' , 'Tom Cruise ' , 'Johnny Depp' , 'C') ,
+(3,'Which singer is known for her hit songs "Bad Romance" and "Poker Face"?' , 'Katy Perry' , 'Taylor Swift' , 'Lady Gaga ' , 'Ariana Grande' , 'C') ,
+(4,'Who played the character of Iron Man in the Marvel Cinematic Universe?' , 'Chris Evans' , 'Mark Ruffalo' , 'Robert Downey Jr. ' , 'Chris Hemsworth' , 'C') ,
+(5,'Which actress won an Academy Award for her role in "La La Land"?' , 'Natalie Portman' , 'Emma Stone' , 'Cate Blanchett ' , 'Meryl Streep' , 'B') ,
+(6,'Who is known as the "King of Pop"?' , 'Michael Jordan' , 'Prince' , 'Michael Jackson ' , 'Justin Timberlake' , 'C') ,
+(7,'Which singer has the nickname "Beyoncé"?' , 'Beyoncé Knowles' , 'Nicki Minaj' , 'Rihanna ' , 'Cardi B' , 'A') ,
+(8,'Which actor played the role of Harry Potter in the film series?' , 'Daniel Radcliffe' , 'lijah Wood' , 'Robert Pattinson ' , 'Rupert Grint' , 'A') ,
+(9,'Who is known as "America Sweetheart"?' , 'Julia Roberts' , 'Reese Witherspoon' , 'Sandra Bullock ' , 'Meg Ryan' , 'D') ,
+(10,'Which singer is known for her album "1989" and hit singles like "Shake It Off"?' , 'Katy Perry' , 'Taylor Swift ' , 'Adele ' , 'Selena Gomez' , 'B') ,
+(11,'Who played the character of Jack Sparrow in the "Pirates of the Caribbean" film series?' , 'Orlando Bloom' , 'Johnny Depp' , 'Leonardo DiCaprio ' , 'Brad Pitt' , 'B') ,
+(12,'Which actress starred in the film "The Hunger Games" as Katniss Everdeen?' , 'Jennifer Lopez' , 'Emma Watson' , 'Jennifer Lawrence ' , 'Anne Hathaway' , 'C') ,
+(13,'Who is known as the "Godfather of Soul"?' , 'James Brown' , 'Marvin Gaye' , 'Stevie Wonder ' , 'Ray Charles' , 'A') ,
+(14,'Which actor starred in the "John Wick" film series?' , 'Keanu Reeves' , 'Liam Neeson' , 'Denzel Washington ' , 'Chris Hemsworth' , 'A') ,
+(15,'Who played the character of Hermione Granger in the "Harry Potter" film series?' , 'Emma Roberts' , 'Emma Stone' , 'Emma Watson ' , 'Emma Thompson' , 'C') ,
+(16,'Which singer is known for her hit singles "Roar" and "Firework"?' , 'Katy Perry' , 'Lady Gaga' , 'Taylor Swift ' , 'Beyoncé' , 'A') ,
+(17,'Who won an Academy Award for his role in "The Revenant"?' , 'Brad Pitt' , 'Leonardo DiCaprio' , 'Johnny Depp ' , 'Robert Downey Jr.' , 'B') ,
+(18,'Which actress played the role of Rey in the recent "Star Wars" film trilogy?' , 'Daisy Ridley ' , 'Natalie' , ' Keira Knightley ' , 'Carrie Fisher' , 'A') ,
+(19,'Who is known as the "Material Girl"?' , 'Natalie' , 'Britney Spears' , 'Madonna ' , 'Janet Jackson' , 'C') ,
+(20,'Which actor starred in the "Twilight" film series as Edward Cullen?' , 'Taylor Lautner' , 'Robert Pattinson' , 'Kellan Lutz ' , 'Jackson Rathbone' , 'B') ,
+(21,'Who is known for her role as Daenerys Targaryen in the TV series "Game of Thrones"?' , 'Emilia Clarke ' , 'Sophie Turner' , 'Maisie Williams ' , 'Lena Headey' , 'A') ,
+(22,'Which singer is known for her hit singles "Hello" and "Rolling in the Deep"?' , ' Beyoncé' , 'Beyoncé' , 'Rihanna ' , 'Ariana Grande' , 'A') ,
+(23,'Who played the character of Wolverine in the "X-Men" film series?' , ' Hugh Jackman ' , ' Chris Evans' , ' Ryan Reynolds ' , ' Patrick Stewart' , 'A') ,
+(24,'Which actress won an Academy Award for her role in "Black Swan"?' , ' Natalie Portman ' , ' Anne Hathaway' , ' Cate Blanchett ' , ' Jennifer Lawrence' , 'A') ,
+(25,'Who is known as "Jenny from the Block"?' , ' Jennifer Hudson' , ' Jennifer Garner' , ' Jennifer Aniston ' , ' Jennifer Lopez ' , 'D') ,
+(26,'Which actor starred in the film "Forrest Gump" as the titular character?' , ' Tom Hanks ' , ' Robert De Niro' , ' Harrison Ford ' , ' Al Pacino' , 'A') ,
+(27,'Who is known for his role as Tony Stark/Iron Man in the Marvel Cinematic Universe?' , ' Chris Hemsworth' , ' Chris Pratt' , ' Robert Downey Jr ' , ' Chris Evans' , 'C') ,
+(28,'Which actress starred in the film "Pretty Woman" as Vivian Ward?' , ' Julia Roberts ' , ' Nicole Kidman' , ' Reese Witherspoon ' , ' Cameron Diaz' , 'A') ,
+(29,'Who is known as the "Bad Girl of Pop"?' , ' Britney Spears' , ' Lady Gaga' , ' Madonna ' , ' Beyoncé' , 'A') ,
+(30,'Which actor played the role of Captain America/Steve Rogers in the Marvel Cinematic Universe?' , ' Chris Hemsworth' , ' Chris Pratt' , ' Chris Evans  ' , ' Robert Downey Jr.' , 'C') ,
+(31,'Who won an Academy Award for her role in "Silver Linings Playbook"?' , ' Meryl Streep' , ' Anne Hathaway' , ' Natalie Portman ' , ' Jennifer Lawrence ' , 'D') ,
+(32,'Which singer is known for her hit singles "Formation" and "Crazy in Love"?' , ' Katy Perry' , ' Lady Gaga' , ' Taylor Swift ' , ' Beyoncé' , 'D') ,
+(33,'Who played the character of Thor in the Marvel Cinematic Universe?' , ' Chris Pratt' , ' Chris Evans' , ' Chris Hemsworth ' , ' Robert Downey Jr.' , 'C') ,
+(34,'Which actress starred in the film "Breakfast at Tiffany" as Holly Golightly?' , ' Audrey Hepburn' , ' Grace Kelly' , ' Marilyn Monroe ' , ' Elizabeth Taylor' , 'A') ,
+(35,'Who is known for his role as Jack Dawson in the film "Titanic"?' , ' Brad Pitt' , ' Leonardo DiCaprio ' , ' Johnny Depp ' , ' Tom Cruise' , 'B') ,
+(36,'Which singer is known for her hit singles "Umbrella" and "Diamonds"?' , ' Katy Perry' , ' Lady Gaga' , ' Taylor Swift ' , ' Rihanna ' , 'D') ,
+(37,'Who played the character of Hermione Grangar in the "Harry Potter" film series?' , ' Emma Watson' , ' Daniel Radcliffe' , ' Rupert Grint ' , ' Bonnie Wright' , 'A') ,
+(38,'Which actor is known for his role as Jack Sparrow in the "Pirates of the Caribbean" film series?' , ' Johnny Depp ' , ' Orlando Bloom' , ' Keira Knightley ' , ' Geoffrey Rush' , 'A') ,
+(39,'Who is known for her role as Katniss Everdeen in "The Hunger Games" film series?' , ' Emma Stone' , ' Scarlett Johansson' , ' Jennifer Aniston ' , ' Jennifer Lawrence' , 'D') ,
+(40,'Which singer is known for her hit singles "Bad Romance" and "Poker Face"?' , ' Ariana Grande' , ' Lady Gaga' , ' Katy Perry ' , ' Beyoncé' , 'B') ;
+
+
+
+select * from Celebrities where id = 40;

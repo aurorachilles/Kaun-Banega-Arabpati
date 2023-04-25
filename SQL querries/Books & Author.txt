@@ -1,0 +1,55 @@
+create table Books_Author (
+id int PRIMARY KEY NOT NULL,
+question varchar(750) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+drop table Books_Author;
+
+insert into Books_Author values (1,'Who wrote the Harry Potter series?' , ' J.R.R. Tolkien' , ' George R.R. Martin' , ' J.K. Rowling ' , ' Stephen King' , 'C') ,
+(2,'Which American author wrote the famous novel "To Kill a Mockingbird"?' , ' J.D. Salinger' , ' Harper Lee' , ' Ernest Hemingway ' , ' F. Scott Fitzgerald' , 'B') ,
+(3,'Who is the author of the "A Song of Ice and Fire" series, which inspired the TV show "Game of Thrones"?' , ' George R.R. Martin' , ' J.K. Rowling' , ' Suzanne Collins ' , ' J.R.R. Tolkien' , 'A') ,
+(4,'Who is known as the "Queen of Crime" and is the author of the popular mystery series featuring detective Hercule Poirot?' , ' Agatha Christie' , ' Mary Shelley' , ' Emily Bronte ' , ' Jane Austen' , 'A') ,
+(5,'Which Nobel Prize-winning author wrote the novel "One Hundred Years of Solitude"?' , ' Gabriel Garcia Marquez' , ' Isabel Allende' , ' Julio Cortazar ' , ' Pablo Neruda' , 'A') ,
+(6,'Who wrote the classic novel "Pride and Prejudice"?' , ' Charles Dickens' , ' Emily Dickinson' , ' Virginia Woolf ' , ' Jane Austen' , 'D') ,
+(7,'Who is the author of the "Lord of the Rings" series?' , ' C.S. Lewis' , ' J.R.R. Tolkien' , ' J.K. Rowling ' , ' George Orwell' , 'B') ,
+(8,'Which American author wrote the Pulitzer Prize-winning novel "To Kill a Mockingbird"?' , ' J.D. Salinger' , ' Harper Lee' , ' Ernest Hemingway ' , ' Toni Morrison' , 'B') ,
+(9,'Who is the author of the "Chronicles of Narnia" series?' , ' Suzanne Collins' , ' J.R.R. Tolkien' , ' George R.R. Martin ' , ' C.S. Lewis' , 'D') ,
+(10,'Who wrote the dystopian novel "1984"?' , ' Aldous Huxley' , ' George Orwell' , ' Ray Bradbury ' , ' Margaret Atwood' , 'B') ,
+(11,'Who is the author of the "Hunger Games" trilogy?' , ' J.K. Rowling' , ' Suzanne Collins' , ' Veronica Roth ' , ' Stephenie Meyer' , 'B') ,
+(12,'Which Russian author wrote the epic novel "War and Peace"?' , ' Fyodor Dostoevsky' , ' Vladimir Nabokov' , ' Leo Tolstoy ' , ' Aleksandr Solzhenitsyn' , 'C') ,
+(13,'Who is the author of the "Outlander" series, which has also been adapted into a popular TV show?' , ' Diana Gabaldon' , ' Jodi Picoult' , ' Margaret Atwood ' , ' Philippa Gregory' , 'A') ,
+(14,'Who wrote the novel "The Great Gatsby"?' , ' Ernest Hemingway' , ' F. Scott Fitzgerald' , ' William Faulkner ' , ' Harper Lee' , 'B') ,
+(15,'Which American author wrote the science fiction novel "Fahrenheit 451"?' , ' Ray Bradbury' , ' Isaac Asimov' , ' Arthur C. Clarke ' , ' Philip K. Dick' , 'A') ,
+(16,'Who is the author of the "A Court of Thorns and Roses" series?' , ' Sarah J. Maas' , ' Cassandra Clare' , ' Leigh Bardugo ' , ' Sabaa Tahir' , 'A') ,
+(17,'Who wrote the classic novel "Jane Eyre"?' , ' Emily Bronte' , ' Louisa May Alcott' , ' Charlotte Bronte ' , ' Virginia Woolf' , 'C') ,
+(18,'Which American author wrote the Pulitzer Prize-winning novel "The Grapes of Wrath"?' , ' John Steinbeck' , ' Harper Lee' , ' Ernest Hemingway ' , ' F. Scott Fitzgerald' , 'A') ,
+(19,'Who is the author of the "The Chronicles of the Black Company" series?' , ' Patrick Rothfuss' , ' R.A. Salvatore' , ' Scott Lynch ' , ' Glen Cook' , 'D') ,
+(20,'Who wrote the fantasy novel "The Name of the Wind"?' , ' George R.R. Martin' , ' Patrick Rothfuss' , ' Brandon Sanderson ' , ' Terry Pratchett' , 'B') ,
+(21,'Who is the author of the "The Girl with the Dragon Tattoo" series?' , ' Stieg Larsson' , ' Gillian Flynn' , ' Paula Hawkins ' , ' Karin Slaughter' , 'A') ,
+(22,'Which British author wrote the "Sherlock Holmes" detective stories?' , ' Charles Dickens' , ' Arthur Conan Doyle' , ' Virginia Woolf ' , ' Jane Austen' , 'B') ,
+(23,'Who is the author of the "Divergent" trilogy?' , ' Veronica Roth' , ' Suzanne Collins' , ' J.K. Rowling ' , ' Cassandra Clare' , 'A') ,
+(24,'Who wrote the dystopian novel "The Handmaid Tale"?' , ' J.K. Rowling' , ' Margaret Atwood' , ' Ursula K. Le Guin ' , ' Octavia Butler' , 'B') ,
+(25,'Which American author wrote the novel "The Catcher in the Rye"?' , ' J.D. Salinger' , ' F. Scott Fitzgerald' , ' Ernest Hemingway ' , ' Mark Twain' , 'A') ,
+(26,'Who is the author of the "The Wheel of Time" series?' , ' Terry Pratchett' , ' Robert Jordan' , ' Brandon Sanderson ' , ' Neil Gaiman' , 'B') ,
+(27,'Which African-American author wrote the Pulitzer Prize-winning novel "Beloved"?' , ' Alice Walker' , ' Toni Morrison' , ' Zora Neale Hurston ' , ' Maya Angelou' , 'B') ,
+(28,'Who is the author of the "Red Queen" series?' , ' Leigh Bardugo' , ' Victoria Aveyard' , ' Sarah J. Maas ' , ' Sabaa Tahir' , 'B') ,
+(29,'Who wrote the novel "The Da Vinci Code"?' , ' J.K. Rowling' , ' Stephenie Meyer' , ' Dan Brown ' , ' John Green' , 'C') ,
+(30,'Who is the author of the "The Mortal Instruments" series?' , ' Cassandra Clare' , ' Suzanne Collins' , ' Veronica Roth ' , ' Sarah J. Maas' , 'A') ,
+(31,'Who wrote the novel "The Lord of the Rings"?' , ' J.R.R. Tolkien' , ' C.S. Lewis' , ' George R.R. Martin ' , ' Terry Pratchett' , 'A') ,
+(32,'Who is the author of the "The Hunger Games" trilogy?' , ' Suzanne Collins' , ' Veronica Roth' , ' J.K. Rowling ' , ' Cassandra Clare' , 'A') ,
+(33,'Which American author wrote the novel "Gone Girl"?' , ' Gillian Flynn' , ' Jodi Picoult' , ' Liane Moriarty ' , ' Paula Hawkins' , 'A') ,
+(34,'Who is the author of the "The Kingkiller Chronicle" series?' , ' Patrick Rothfuss' , ' George R.R. Martin' , ' Robin Hobb ' , ' Neil Gaiman' , 'A') ,
+(35,'Who wrote the classic novel "To Kill a Mockingbird"?' , ' Harper Lee' , ' Emily Bronte' , ' Louisa May Alcott ' , ' Charlotte Bronte' , 'A') ,
+(36,'Who is the author of the "Percy Jackson & The Olympians" series?' , ' Rick Riordan' , ' Leigh Bardugo' , ' Sarah J. Maas ' , ' Cassandra Clare' , 'A') ,
+(37,'Which Indian author wrote the novel "The God of Small Things"?' , ' Arundhati Roy' , ' Salman Rushdie' , ' Jhumpa Lahiri ' , ' R.K. Narayan' , 'A') ,
+(38,'Who is the author of the "The Witcher" series?' , ' Andrzej Sapkowski' , ' Terry Pratchett' , ' Philip Pullman ' , ' J.R.R. Tolkien' , 'A') ,
+(39,'Who wrote the classic novel "Wuthering Heights"?' , ' Emily Bronte' , ' Jane Austen' , ' Louisa May Alcott ' , ' Charlotte Bronte' , 'A') ,
+(40,'Which American author wrote the novel "The Shining"?' , ' Stephen King' , ' Dean Koontz' , ' Edgar Allan Poe ' , ' H.P. Lovecraft' , 'A') ;
+
+
+
+select * from Books_Author where id = 40;

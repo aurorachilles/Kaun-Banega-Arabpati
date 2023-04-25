@@ -1,0 +1,55 @@
+create table General_Science (
+id int PRIMARY KEY NOT NULL,
+question varchar(750) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+drop table General_Science;
+
+insert into General_Science values (1,'What is the process by which a solid changes directly into a gas without going through the liquid phase?' , ' Sublimation' , ' Evaporation' , ' Condensation ' , ' Melting' , 'A') ,
+(2,'Which of the following is not a primary color of light?' , ' Red' , ' Yellow' , ' Blue ' , ' Green' , 'B') ,
+(3,'What is the study of matter, its properties, and its interactions with energy and other matter?' , ' Physics' , ' Chemistry' , ' Geology ' , ' Astronomy' , 'B') ,
+(4,'Which of the following is a unit of pressure?' , ' Pascal' , ' Joule' , ' Ampere ' , ' Kelvin' , 'A') ,
+(5,'Which of the following is not a type of simple machine?' , ' Lever' , ' Pulley' , ' Magnet ' , ' Inclined plane' , 'C') ,
+(6,'What is the unit of electric current?' , ' Volt' , ' Watt' , ' Ampere ' , ' Ohm' , 'C') ,
+(7,'Which of the following is not a state of matter?' , ' Solid' , ' Liquid' , ' Gas ' , ' Plasma' , 'D') ,
+(8,'What is the process by which a liquid changes into a solid?' , ' Sublimation' , ' Evaporation' , ' Condensation ' , ' Freezing' , 'D') ,
+(9,'Which of the following is not a type of electromagnetic radiation?' , ' X-rays' , ' Sound waves' , ' Gamma rays ' , ' Ultraviolet rays' , 'B') ,
+(10,'What is the study of the Earth atmosphere and weather?' , ' Meteorology' , ' Geology' , ' Astronomy ' , ' Botany' , 'A') ,
+(11,'Which of the following is not a type of chemical element?' , 'Carbon' , ' Oxygen' , ' Hydrogen ' , '  Magnetism' , 'D') ,
+(12,'What is the unit of force?' , ' Newton' , ' Joule' , ' Watt ' , ' Kilogram' , 'A') ,
+(13,'Which of the following is not a type of rock?' , ' Granite' , ' Diamond' , ' Limestone ' , ' Sandstone' , 'B') ,
+(14,'What is the process by which a gas changes directly into a solid without going through the liquid phase?' , ' Sublimation' , ' Evaporation' , ' Condensation ' , ' Deposition' , 'D') ,
+(15,'What is the unit of electric power?' , ' Watt' , ' Joule' , 'Volt ' , 'Ampere' , 'A') ,
+(16,'What is the unit of power?' , ' Watt' , ' Volt' , ' Ampere ' , ' Ohm' , 'A') ,
+(17,'Which of the following is not a type of magnet?' , ' Permanent magnet' , ' Temporary magnet' , ' Electro magnet ' , ' Radio magnet' , 'D') ,
+(18,'What is the study of motion and forces?' , ' Biology' , ' Geology' , ' Physics ' , ' Chemistry' , 'C') ,
+(19,'What is the unit of frequency?' , ' Hertz' , ' Joule' , ' Watt ' , ' Ampere' , 'A') ,
+(20,'Which of the following is not a type of lens?' , ' Convex lens' , ' Concave lens' , ' Reflective lens ' , ' Bifocal lens' , 'C') ,
+(21,'What is the process by which a liquid changes into a gas at a temperature below its boiling point?' , ' Evaporation' , ' Sublimation' , ' Condensation ' , ' Melting' , 'A') ,
+(22,'Which of the following is not a type of chemical reaction?' , ' Oxidation' , ' Reduction' , ' Fusion ' , ' Decomposition' , 'C') ,
+(23,'What is the unit of electric resistance?' , ' Ohm' , ' Volt' , ' Ampere ' , ' Watt' , 'A') ,
+(24,'Which of the following is not a type of gas?' , ' Oxygen' , ' Carbon dioxide' , ' Chlorine ' , ' Sodium' , 'D') ,
+(25,'What is the process by which plants use sunlight to convert carbon dioxide and water into glucose and oxygen?' , ' Photosynthesis' , ' Respiration' , ' Fermentation ' , ' Combustion' , 'A') ,
+(26,'Which of the following is not a type of chemical bond?' , ' Ionic bond' , ' Covalent bond' , ' Hydrogen bond ' , ' Magnetic bond' , 'D') ,
+(27,'What is the unit of electric voltage?' , ' Volt' , ' Ampere' , ' Watt ' , ' Ohm' , 'A') ,
+(28,'Which of the following is not a type of force?' , ' Gravitational force' , ' Magnetic force' , ' Centrifugal force ' , ' Electrostatic force' , 'C') ,
+(29,'What is the process by which a liquid changes into a solid by lowering its temperature?' , ' Evaporation' , ' Sublimation' , ' Condensation ' , ' Solidification' , 'D') ,
+(30,'Which of the following is not a type of metal?' , ' Copper' , ' Iron' , ' Glass ' , ' Aluminum' , 'C') ,
+(31,'What is the unit of electric charge?' , ' Coulomb' , ' Ampere' , ' Volt ' , ' Watt' , 'A') ,
+(32,'Which of the following is not a type of wave?' , ' Radio wave' , ' Sound wave' , ' Water wave ' , ' Rock wave' , 'D') ,
+(33,'What is the process by which a gas changes into a liquid?' , ' Sublimation' , ' Evaporation' , ' Condensation ' , ' Vaporization' , 'C') ,
+(34,'Which of the following is not a type of heat transfer?' , ' Conduction' , ' Convection' , ' Insulation ' , ' Radiation' , 'C') ,
+(35,'What is the unit of speed?' , ' Meter per second' , ' Newton' , ' Kilogram ' , ' Pascal' , 'A') ,
+(36,'Which of the following is not a type of rock cycle?' , ' Igneous rock' , ' Metamorphic rock' , ' Sedimentary rock ' , ' Magnetic rock' , 'D') ,
+(37,'What is the unit of pressure?' , ' Pascal' , ' Newton' , ' Volt ' , ' Ampere' , 'A') ,
+(38,'Which of the following is not a type of energy?' , ' Kinetic energy' , ' Potential energy' , ' Electric energy ' , ' Chemical energy' , 'C') ,
+(39,'What is the process by which a liquid changes into a gas at its boiling point?' , ' Evaporation' , ' Sublimation' , ' Condensation ' , ' Boiling' , 'D') ,
+(40,'Which of the following is not a type of electromagnetic wave?' , ' Radio waves' , ' X-rays' , ' Ultraviolet rays ' , ' Sound waves' , 'D');
+
+
+
+select * from General_Science where id = 40;

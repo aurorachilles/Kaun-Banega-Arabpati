@@ -1,0 +1,63 @@
+create table Awards (
+id int PRIMARY KEY NOT NULL,
+question varchar(750) NOT NULL UNIQUE,
+option_1 varchar(100) NOT NULL,
+option_2 varchar(100) NOT NULL,
+option_3 varchar(100) NOT NULL,
+option_4 varchar(100) NOT NULL,
+correct_option varchar(1) NOT NULL);
+
+drop table Awards;
+
+insert into Awards values (1,'The Nobel Prize in Literature is awarded by which organization?' , ' United Nations Educational, Scientific, and Cultural Organization (UNESCO)' , ' The Royal Swedish Academy of Sciences' , ' The Nobel Foundation ' , ' The Swedish Academy' , 'D') ,
+(2,'Which prestigious literary award is awarded annually for the best work of fiction in the English language?' , ' Nobel Prize in Literature' , ' Pulitzer Prize for Fiction' , ' Man Booker Prize ' , ' National Book Award' , 'B') ,
+(3,'The Man Booker Prize is awarded for what type of literature?' , ' Science fiction' , ' Poetry' , ' Non-fiction ' , ' Fiction' , 'D') ,
+(4,'Who was the first African-American writer to win the Pulitzer Prize for Fiction?' , ' Toni Morrison' , ' Langston Hughes' , ' James Baldwin ' , ' Ralph Ellison' , 'A') ,
+(5,'The National Book Award is an American literary award that is awarded in which categories?' , ' Fiction, Non-fiction, Poetry, and Young People Literature' , ' Fiction, Biography, History, and Poetry' , ' Fiction, Non-fiction, Drama, and Poetry ' , ' Fiction, Memoir, Poetry, and Children Literature' , 'A') ,
+(6,'Which literary award is known as the "Man Booker Prize" until 2019, after which it was renamed?
+' , 'Pulitzer Prize for Fiction
+' , 'International Dublin Literary Award
+' , ' National Book Award
+ ' , 'International Booker Prize
+' , 'D') ,
+(7,'The Nobel Prize in Literature has been awarded since:' , ' 1901' , ' 1921' , ' 1945 ' , ' 1969' , 'A') ,
+(8,'Which literary award is often referred to as the "Asian Nobel Prize"?' , ' DSC Prize for South Asian Literature' , ' Man Asian Literary Prize' , ' JCB Prize for Literature ' , ' PEN/Faulkner Award for Fiction' , 'B') ,
+(9,'The Pulitzer Prize for Drama is awarded for what type of literary work?' , ' Fiction' , ' Non-fiction' , ' Poetry ' , ' Playwriting' , 'D') ,
+(10,'The Costa Book Awards, formerly known as the Whitbread Awards, are awarded in which categories?' , ' Fiction, Non-fiction, Poetry, and Children Books' , ' Fiction, Biography, History, and Poetry' , ' Fiction, Non-fiction, Drama, and Poetry ' , ' Fiction, Memoir, Poetry, and Young Adult Fiction' , 'A') ,
+(11,'The Man Booker Prize was first awarded in which year?' , ' 1969' , ' 1985' , ' 1995 ' , ' 1968' , 'D') ,
+(12,'The Hugo Award is a prestigious literary award for which genre of literature?' , ' Mystery' , ' Romance' , ' Science fiction and fantasy ' , ' Historical fiction' , 'C') ,
+(13,'Which award is often considered the highest honor in the field of children literature?' , ' Newbery Medal' , ' Pulitzer Prize for Fiction' , ' National Book Award for Young People Literature ' , ' Carnegie Medal' , 'A') ,
+(14,'The Booker Prize for Fiction was renamed as the Man Booker Prize in which year?' , ' 2002' , ' 1985' , ' 2018 ' , ' 1995' , 'C') ,
+(15,'The National Book Critics Circle Award is awarded in which categories?' , ' Fiction, Non-fiction, Poetry, and Criticism' , ' Fiction, Biography, History, and Poetry' , ' Fiction, Non-fiction, Drama, and Poetry ' , ' Fiction, Memoir, Poetry, and Children Literature' , 'A') ,
+(16,'The Nebula Award is a prestigious literary award for which genre of literature?' , ' Mystery' , ' Romance' , ' Science fiction and fantasy ' , ' Historical fiction' , 'C') ,
+(17,'The Pulitzer Prize for History is awarded for what type of literary work?' , ' Fiction' , ' Non-fiction' , ' Poetry ' , ' Playwriting' , 'B') ,
+(18,'The National Book Award for Poetry is awarded for what type of literary work?' , ' Fiction' , ' Non-fiction' , ' Poetry ' , ' Drama' , 'C') ,
+(19,'The Hugo Award for Best Novel is awarded for which genre of literature?' , ' Mystery' , ' Romance' , ' Science fiction and fantasy ' , ' Historical fiction' , 'C') ,
+(20,'The International Dublin Literary Award is awarded for what type of literature?' , ' Poetry' , ' Fiction' , ' Non-fiction ' , ' Drama' , 'B') ,
+(21,'The Pulitzer Prize for Biography is awarded for what type of literary work?' , ' Fiction' , ' Non-fiction' , ' Poetry ' , ' Playwriting' , 'B') ,
+(22,'The Agatha Award is a literary award for which genre of literature?' , ' Mystery' , ' Romance' , ' Science fiction and fantasy ' , ' Historical fiction' , 'A') ,
+(23,'The International Prize for Arabic Fiction, also known as the "Arabic Booker," is awarded for what type of literature?' , ' Fiction written in English' , ' Fiction written in any language' , ' Poetry ' , ' Non-fiction' , 'B') ,
+(24,'The Cervantes Prize is a prestigious literary award for writers who produce literature in which language?' , ' English' , ' Spanish' , ' French ' , ' German' , 'B') ,
+(25,'The Hugo Award for Best Graphic Story is awarded for which genre of literature?' , ' Poetry' , ' Fiction' , ' Non-fiction ' , ' Graphic novels and comic books' , 'D') ,
+(26,'The Edgar Award is a prestigious literary award for which genre of literature?' , ' Mystery' , ' Romance' , ' Science fiction and fantasy ' , ' Historical fiction' , 'A') ,
+(27,'The Pulitzer Prize for Poetry is awarded for what type of literary work?' , ' Fiction' , ' Non-fiction' , ' Poetry ' , ' Drama' , 'C') ,
+(28,'The Costa Book of the Year award is selected from the winners of which categories?' , ' Fiction, Non-fiction, Poetry, and Children Books' , ' Fiction, Biography, History, and Poetry' , ' Fiction, Non-fiction, Drama, and Poetry ' , ' Fiction, Memoir, Poetry, and Young Adult Fiction' , 'A') ,
+(29,'The Women Prize for Fiction was previously known by which name?' , ' Orange Prize for Fiction' , ' Man Booker Prize for Fiction' , ' National Book Award for Fiction ' , ' Pulitzer Prize for Fiction' , 'A') ,
+(30,'The Coretta Scott King Book Award is awarded for what type of literature?' , ' African American literature' , ' Asian literature' , ' European literature ' , ' Latin American literature' , 'A') ,
+(31,'The Nobel Prize in Literature has been awarded to the same person multiple times. Who is that author?' , 'Gabriel Garcia Marquez' , 'Ernest Hemingway' , ' William Butler Yeats' , 'J.M. Coetzee' , 'C') ,
+(32,'The Man Booker International Prize is awarded for what type of literature?' , ' Poetry' , ' Fiction' , ' Non-fiction ' , ' Drama' , 'B') ,
+(33,'The PEN/Faulkner Award for Fiction is awarded for what type of literature?' , ' Poetry' , ' Fiction' , ' Non-fiction ' , ' Drama' , 'B') ,
+(34,'The Caldecott Medal is awarded for excellence in which field?' , ' Children literature' , ' Young adult literature' , ' Science fiction and fantasy literature ' , ' Historical fiction literature' , 'A') ,
+(35,'The National Book Critics Circle Award is awarded for what type of literature?' , ' Fiction' , ' Non-fiction' , 'Poetry' , 'Drama' , 'A') ,
+(36,'The Costa Book Awards were previously known by which name?' , ' Orange Prize for Fiction' , ' Man Booker Prize for Fiction' , ' Whitbread Awards ' , ' Pulitzer Prize for Fiction' , 'C') ,
+(37,'The International Prize for Translated Fiction is awarded for what type of literature?' , ' Fiction written in English' , ' Fiction written in any language' , ' Poetry ' , ' Non-fiction' , 'B') ,
+(38,'The Scotiabank Giller Prize is a literary award for writers who produce literature in which country?' , ' Canada' , ' United States' , ' United Kingdom ' , ' Australia' , 'A') ,
+(39,'The Hugo Award for Best Graphic Story is awarded for excellence in which genre of literature?
+' , ' British literature' , ' Irish literature' , ' American literature ' , 'Graphic novels and comic books
+' , 'D') ,
+(40,'The Hugo Award is awarded for excellence in which genre of literature?' , 'Fiction' , 'Poetry' , ' Non-fiction
+' , ' Historical fiction literature' , 'A') ;
+
+
+
+select * from Awards where id = 40;
