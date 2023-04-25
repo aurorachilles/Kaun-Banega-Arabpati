@@ -313,12 +313,12 @@ public class main_quiz_page extends javax.swing.JFrame {
                     System.out.println(first);
                     System.exit(-1);
                 }
-            } catch (ClassNotFoundException | SQLException ex) {
+            } catch (ClassNotFoundException ex){
                 Logger.getLogger(main_quiz_page.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
+            } catch ( SQLException ex) {
+            Logger.getLogger(main_quiz_page.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        }
         else
         {
             if(game_on == false)
@@ -421,9 +421,16 @@ public class main_quiz_page extends javax.swing.JFrame {
                     Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (SQLException ex) {
                     Logger.getLogger(login_page.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                new main_quiz_page(unique_id,table_name).setVisible(true);
-                this.dispose();
+                } finally {
+                            game_on = true;
+                            start_check = false;
+                            prize_count = 0;
+                            label = 0;
+                            next_question = false;
+                            new main_quiz_page(unique_id,table_name).setVisible(true);
+                            this.dispose();
+                    }
+                
             }
             else if(next_question == true)
             {
