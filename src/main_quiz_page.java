@@ -10,9 +10,7 @@ import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UIManager.LookAndFeelInfo;
-import javax.swing.UnsupportedLookAndFeelException;
+
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -98,6 +96,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         a3 = new javax.swing.JLabel();
         a2 = new javax.swing.JLabel();
         a1 = new javax.swing.JLabel();
+        money_label = new javax.swing.JLabel();
         money = new javax.swing.JLabel();
         option_d = new javax.swing.JLabel();
         option_c = new javax.swing.JLabel();
@@ -233,10 +232,15 @@ public class main_quiz_page extends javax.swing.JFrame {
         a1.setText("|||");
         getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 740, 40, 30));
 
+        money_label.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        money_label.setForeground(new java.awt.Color(255, 255, 255));
+        money_label.setText("₹");
+        getContentPane().add(money_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
+
         money.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         money.setForeground(new java.awt.Color(255, 255, 255));
         money.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(money, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 310, 40));
+        getContentPane().add(money, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 290, 40));
 
         option_d.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         option_d.setForeground(new java.awt.Color(255, 255, 255));
@@ -778,25 +782,8 @@ public class main_quiz_page extends javax.swing.JFrame {
 
 
 
-    public static void main(String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(main_quiz_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(main_quiz_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(main_quiz_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(main_quiz_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-
-        UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+    public static void main(String args[]) {
+       
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -832,6 +819,7 @@ public class main_quiz_page extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JLabel main_background;
     private javax.swing.JLabel money;
+    private javax.swing.JLabel money_label;
     private javax.swing.JButton no;
     private javax.swing.JLabel option_a;
     private javax.swing.JLabel option_b;

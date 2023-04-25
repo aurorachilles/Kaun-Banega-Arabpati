@@ -1,7 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,14 +38,17 @@ public class quiz_page1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        submit.setBackground(new java.awt.Color(0, 0, 0));
         submit.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        submit.setForeground(new java.awt.Color(255, 255, 255));
         submit.setText("Submit");
+        submit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitActionPerformed(evt);
             }
         });
-        getContentPane().add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, 170, 50));
+        getContentPane().add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, 170, 50));
 
         drop_down.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         drop_down.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select your movie" }));
@@ -57,88 +58,97 @@ public class quiz_page1 extends javax.swing.JFrame {
                 drop_downActionPerformed(evt);
             }
         });
-        getContentPane().add(drop_down, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 250, 50));
+        getContentPane().add(drop_down, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 250, 50));
 
-        politics.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        politics.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         politics.setText("Politics");
+        politics.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         politics.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 politicsActionPerformed(evt);
             }
         });
-        getContentPane().add(politics, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 170, 50));
+        getContentPane().add(politics, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 170, 50));
 
-        misc.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        misc.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         misc.setText("Misc");
+        misc.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         misc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 miscActionPerformed(evt);
             }
         });
-        getContentPane().add(misc, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 510, 170, 50));
+        getContentPane().add(misc, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 530, 170, 50));
 
-        automobiles.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        automobiles.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         automobiles.setText("Automobiles");
+        automobiles.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         automobiles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 automobilesActionPerformed(evt);
             }
         });
-        getContentPane().add(automobiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 170, 50));
+        getContentPane().add(automobiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, 170, 50));
 
-        literature.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        literature.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         literature.setText("Literature");
+        literature.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         literature.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 literatureActionPerformed(evt);
             }
         });
-        getContentPane().add(literature, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 170, 50));
+        getContentPane().add(literature, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 240, 170, 50));
 
-        pop_culture.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        pop_culture.setText("Pop-Culture");
+        pop_culture.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
+        pop_culture.setText("Pop Culture");
+        pop_culture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         pop_culture.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pop_cultureActionPerformed(evt);
             }
         });
-        getContentPane().add(pop_culture, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 170, 50));
+        getContentPane().add(pop_culture, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 170, 50));
 
-        science.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        science.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         science.setText("Science");
+        science.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         science.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 scienceActionPerformed(evt);
             }
         });
-        getContentPane().add(science, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 170, 50));
+        getContentPane().add(science, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 170, 50));
 
-        movies.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        movies.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         movies.setText("Movies");
+        movies.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         movies.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moviesActionPerformed(evt);
             }
         });
-        getContentPane().add(movies, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 520, 170, 50));
+        getContentPane().add(movies, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 530, 170, 50));
 
-        history.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        history.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         history.setText("History");
+        history.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         history.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 historyActionPerformed(evt);
             }
         });
-        getContentPane().add(history, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 170, 50));
+        getContentPane().add(history, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 170, 50));
 
-        geography.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        geography.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         geography.setText("Geography");
+        geography.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         geography.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 geographyActionPerformed(evt);
             }
         });
-        getContentPane().add(geography, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 170, 50));
+        getContentPane().add(geography, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 170, 50));
 
         profile.setFont(new java.awt.Font("Segoe Print", 0, 18)); // NOI18N
         profile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -155,16 +165,18 @@ public class quiz_page1 extends javax.swing.JFrame {
         });
         getContentPane().add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 30, 110, 40));
 
-        sports.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        sports.setFont(new java.awt.Font("Lucida Sans", 1, 18)); // NOI18N
         sports.setText("Sports");
+        sports.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         sports.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sportsActionPerformed(evt);
             }
         });
-        getContentPane().add(sports, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 170, 50));
+        getContentPane().add(sports, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 170, 50));
 
-        jLabel1.setFont(new java.awt.Font("Segoe Print", 0, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Pick a topic of your interest");
         jLabel1.setToolTipText("");
@@ -174,7 +186,8 @@ public class quiz_page1 extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 300, 40));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 24)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Welcome to Kaun Banega Arabpati");
         jLabel2.setToolTipText("");
@@ -182,9 +195,9 @@ public class quiz_page1 extends javax.swing.JFrame {
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setOpaque(true);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 460, 80));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 470, 80));
 
-        main_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/selection_background.png"))); // NOI18N
+        main_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/select.png"))); // NOI18N
         getContentPane().add(main_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -409,9 +422,18 @@ public class quiz_page1 extends javax.swing.JFrame {
     }//GEN-LAST:event_drop_downActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        
+        if("none".equals(passable))
+        {
+            JOptionPane.showMessageDialog(null, 
+                              "Please select a Topic for quiz", 
+                              "ERROR", 
+                              JOptionPane.WARNING_MESSAGE);
+        }
+        else
+        {
         new main_quiz_page(unique_id,passable).setVisible(true);
         this.dispose();
+        }
     }//GEN-LAST:event_submitActionPerformed
 
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
