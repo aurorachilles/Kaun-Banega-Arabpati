@@ -38,7 +38,7 @@ public class login_page extends javax.swing.JFrame {
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
         login_button = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
         main_Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,52 +46,61 @@ public class login_page extends javax.swing.JFrame {
 
         username_empty.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
         username_empty.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(username_empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 220, 20));
+        getContentPane().add(username_empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 220, 20));
 
         password_empty.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
         password_empty.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(password_empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 220, 20));
+        getContentPane().add(password_empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 220, 20));
 
-        To_register.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        To_register.setText("Register");
+        To_register.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        To_register.setText("Not a user? Register here");
         To_register.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 To_registerMouseClicked(evt);
             }
         });
-        getContentPane().add(To_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 170, 40));
+        getContentPane().add(To_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 170, 40));
 
-        Login_text.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        Login_text.setText("LOGIN");
-        getContentPane().add(Login_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 70, 40));
+        Login_text.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        Login_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Login_text.setText("LOGIN !");
+        getContentPane().add(Login_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 220, 40));
 
-        username.setFont(new java.awt.Font("Segoe UI Semibold", 0, 21)); // NOI18N
+        username.setFont(new java.awt.Font("Microsoft YaHei", 0, 20)); // NOI18N
+        username.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
             }
         });
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 220, 50));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 220, 50));
 
+        password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 220, 50));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 220, 50));
 
+        login_button.setBackground(new java.awt.Color(134, 113, 255));
+        login_button.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        login_button.setForeground(new java.awt.Color(255, 255, 255));
         login_button.setText("Login");
         login_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 login_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 160, 40));
+        getContentPane().add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 160, 40));
 
-        jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 720, 410));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
+        background.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.black, java.awt.Color.lightGray));
+        background.setOpaque(true);
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 720, 410));
 
-        main_Background.setBackground(new java.awt.Color(255, 255, 255));
+        main_Background.setBackground(new java.awt.Color(240, 240, 249));
+        main_Background.setForeground(new java.awt.Color(204, 204, 255));
         main_Background.setOpaque(true);
         getContentPane().add(main_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 670));
 
@@ -111,7 +120,12 @@ public class login_page extends javax.swing.JFrame {
         char[] pass_char = password.getPassword();
         String pass = new String(pass_char);
         
-        if("".equals(user))
+        if("".equals(user) && "".equals(pass) )
+        {
+            username_empty.setText("Username can't be empty!");
+            password_empty.setText("Password can't be empty!");
+        }
+        else if("".equals(user))
         {
             username_empty.setText("Username can't be empty!");
         }
@@ -141,6 +155,10 @@ public class login_page extends javax.swing.JFrame {
             {
                 username.setText("");
                 password.setText("");
+                JOptionPane.showMessageDialog(null, 
+                              "Wrong username/password", 
+                              "ERROR", 
+                              JOptionPane.WARNING_MESSAGE);
             }
             
         } catch (ClassNotFoundException ex) {
@@ -189,7 +207,7 @@ public class login_page extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Login_text;
     private javax.swing.JLabel To_register;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel background;
     private javax.swing.JButton login_button;
     private javax.swing.JLabel main_Background;
     private javax.swing.JPasswordField password;

@@ -5,7 +5,7 @@ import javax.swing.*;
 
 
 import java.sql.*;
-
+import javafx.scene.control.Alert;
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,16 +36,19 @@ public class register_page extends javax.swing.JFrame {
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
         register_button = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
         main_Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        register_text.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        register_text.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        register_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         register_text.setText("REGISTER");
-        getContentPane().add(register_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, 100, 40));
+        getContentPane().add(register_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 220, 40));
 
+        username.setFont(new java.awt.Font("Microsoft YaHei", 0, 20)); // NOI18N
+        username.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
@@ -53,25 +56,32 @@ public class register_page extends javax.swing.JFrame {
         });
         getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 220, 50));
 
+        password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, 220, 50));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 220, 50));
 
+        register_button.setBackground(new java.awt.Color(134, 113, 255));
+        register_button.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        register_button.setForeground(new java.awt.Color(255, 255, 255));
         register_button.setText("Register");
         register_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 register_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(register_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 160, 40));
+        getContentPane().add(register_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 160, 40));
 
-        jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 720, 410));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/register.png"))); // NOI18N
+        background.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.black, java.awt.Color.lightGray));
+        background.setOpaque(true);
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 720, 410));
 
-        main_Background.setBackground(new java.awt.Color(255, 255, 255));
+        main_Background.setBackground(new java.awt.Color(240, 240, 249));
+        main_Background.setForeground(new java.awt.Color(204, 204, 255));
         main_Background.setOpaque(true);
         getContentPane().add(main_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 670));
 
@@ -87,17 +97,23 @@ public class register_page extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void register_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_register_buttonActionPerformed
-        String user = username.getText();
+        String user = username.getText().trim();
         char[] pass_char = password.getPassword();
-        String pass = new String(pass_char);
+        String pass = new String(pass_char).trim();
         
         DateFormat dateFormat = new SimpleDateFormat("yyMMddHHmmss");
         Date da= new Date();
         String unique_num = dateFormat.format(da);
         
-        if(username == null || pass == null)
+        if("".equals(user) || "".equals(pass))
         {
-            
+            username.setText("");
+            password.setText("");
+            JOptionPane.showMessageDialog(null, 
+                              "Enter username/password", 
+                              "ERROR", 
+                              JOptionPane.WARNING_MESSAGE);
+
         }
         else
         {
@@ -158,7 +174,7 @@ public class register_page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog Error_m;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel background;
     private javax.swing.JLabel main_Background;
     private javax.swing.JPasswordField password;
     private javax.swing.JButton register_button;

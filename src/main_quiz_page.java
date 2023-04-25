@@ -24,6 +24,12 @@ public class main_quiz_page extends javax.swing.JFrame {
  
     public main_quiz_page(String abc, String tablename) {
         initComponents();
+        yes.setOpaque(false);
+        yes.setContentAreaFilled(false);
+        yes.setBorderPainted(false);
+        no.setOpaque(false);
+        no.setContentAreaFilled(false);
+        no.setBorderPainted(false);
         unique_id = abc;
         table_name = tablename;
         Set <Integer> list_of_files = new HashSet<Integer>();
@@ -38,7 +44,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         list = list_of_files.toArray();
         
         are_you_sure.setVisible(false);
-        
+        you_won.setVisible(false);
         if("language".equals(table_name))
         {
         Question_label.setFont(new Font("MS Gothic",Font.BOLD,24));
@@ -75,6 +81,8 @@ public class main_quiz_page extends javax.swing.JFrame {
         are_you_sure = new javax.swing.JLabel();
         yes = new javax.swing.JButton();
         no = new javax.swing.JButton();
+        you_won = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
         a13 = new javax.swing.JLabel();
         a14 = new javax.swing.JLabel();
         a15 = new javax.swing.JLabel();
@@ -102,38 +110,53 @@ public class main_quiz_page extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Confirm.setBackground(new java.awt.Color(255, 255, 255));
-        Confirm.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
+        Confirm.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 10, true));
         Confirm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         are_you_sure_option.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        Confirm.add(are_you_sure_option, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 40, 80));
+        are_you_sure_option.setForeground(new java.awt.Color(255, 255, 255));
+        Confirm.add(are_you_sure_option, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 40, 80));
 
         are_you_ready.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        are_you_ready.setForeground(new java.awt.Color(255, 255, 255));
         are_you_ready.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         are_you_ready.setText("Are you ready to start the game?");
-        Confirm.add(are_you_ready, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 120, 570, -1));
+        Confirm.add(are_you_ready, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 570, -1));
 
         are_you_sure.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        are_you_sure.setForeground(new java.awt.Color(255, 255, 255));
         are_you_sure.setText("Are you sure you want to select Option :");
-        Confirm.add(are_you_sure, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+        Confirm.add(are_you_sure, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
 
+        yes.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        yes.setForeground(new java.awt.Color(255, 255, 255));
         yes.setText("Yes");
         yes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yesActionPerformed(evt);
             }
         });
-        Confirm.add(yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 110, 50));
+        Confirm.add(yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 220, 70));
 
+        no.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        no.setForeground(new java.awt.Color(255, 255, 255));
         no.setText("No");
         no.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noActionPerformed(evt);
             }
         });
-        Confirm.add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 110, 50));
+        Confirm.add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 230, 70));
 
-        getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 580, 400));
+        you_won.setFont(new java.awt.Font("Segoe UI Semilight", 1, 18)); // NOI18N
+        you_won.setForeground(new java.awt.Color(255, 255, 255));
+        you_won.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Confirm.add(you_won, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 570, 20));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/chooser.png"))); // NOI18N
+        Confirm.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 570, 390));
+
+        getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 590, 410));
 
         a13.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
         a13.setForeground(new java.awt.Color(255, 0, 0));
@@ -588,6 +611,9 @@ public class main_quiz_page extends javax.swing.JFrame {
                 are_you_sure_option.setVisible(false);
                 are_you_ready.setVisible(true);
                 are_you_ready.setText("Wrong Answer! Try again?");
+                are_you_ready.setVisible(true);
+                you_won.setVisible(true);
+                you_won.setText("You won ₹"+prize[prize_count-1]);
                 switch(chosen_option)
                 {
                     case 'A':
@@ -718,6 +744,7 @@ public class main_quiz_page extends javax.swing.JFrame {
         }
         else
         {
+            main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quiz_interface.png")));
             Confirm.setVisible(false);
         }
     }//GEN-LAST:event_noActionPerformed
@@ -802,6 +829,7 @@ public class main_quiz_page extends javax.swing.JFrame {
     private javax.swing.JLabel are_you_ready;
     private javax.swing.JLabel are_you_sure;
     private javax.swing.JLabel are_you_sure_option;
+    private javax.swing.JLabel background;
     private javax.swing.JLabel main_background;
     private javax.swing.JLabel money;
     private javax.swing.JButton no;
@@ -810,5 +838,6 @@ public class main_quiz_page extends javax.swing.JFrame {
     private javax.swing.JLabel option_c;
     private javax.swing.JLabel option_d;
     private javax.swing.JButton yes;
+    private javax.swing.JLabel you_won;
     // End of variables declaration//GEN-END:variables
 }

@@ -36,7 +36,7 @@ public class profile extends javax.swing.JFrame {
                 ResultSet rs = stmt.executeQuery(query);
                 while(rs.next())
                 {
-                    data_table.add
+//                    data_table.add
                 }
         }
          catch (ClassNotFoundException ex){
