@@ -1,3 +1,6 @@
+create database Java_Project;
+use Java_Project;
+
 create table Olympics (
 id int PRIMARY KEY NOT NULL,
 question varchar(750) NOT NULL UNIQUE,
@@ -7,27 +10,29 @@ option_3 varchar(100) NOT NULL,
 option_4 varchar(100) NOT NULL,
 correct_option varchar(1) NOT NULL);
 
+drop table Olympics;
+
 insert into Olympics values 
-(1,' When were held the first winter Olympics?' , '1922' , '1924' , '1932 ' , '1902' , 'B') ,
-(2,'What color have five intersecting rings of the Olympic’s flag?' , 'White, Red, Blue, Pink and Green.' , 'Blue, Brown, Yellow, Green and Black.' , 'Red, Black, Breen, Blue and Yellow. ' , 'Red, Green, Black, Teal and Orange.' , 'C') ,
+(1,' When was first winter Olympics held?' , '1922' , '1924' , '1932 ' , '1902' , 'B') ,
+(2,'What color have five intersecting rings of the Olympic’s flag?' , 'White, Red, Blue, Pink and Green.' , 'Blue, Brown, Yellow, Green and Black.' , 'Red, Black, Green, Blue and Yellow. ' , 'Red, Green, Black, Teal and Orange.' , 'C') ,
 (3,'Which of the following is NOT a part of the summer Olympics?' , 'Boxing' , 'Cycling' , 'Biathlon ' , 'Water Polo' , 'C') ,
 (4,'Which of the following is not a part of the modern Olympics anymore?' , 'Softball' , 'Table Tennis' , 'Taekwondo ' , 'Volleyball' , 'A') ,
 (5,'To whom Greeks dedicated Olympic Games?' , 'Apollo' , 'Zeus' , 'Hera ' , 'Demeter' , 'B') ,
-(6,'How is called a period between Olympic Games?' , ' Holiday Break' , 'Fermata' , 'Break ' , 'Olympiad' , 'D') ,
-(7,'From what country originated Olympics?' , 'Italy' , 'USA' , 'Greece ' , 'France' , 'C') ,
+(6,'What is called a period between Olympic Games?' , ' Holiday Break' , 'Fermata' , 'Break ' , 'Olympiad' , 'D') ,
+(7,'From which country Olympics was originated	?' , 'Italy' , 'USA' , 'Greece ' , 'France' , 'C') ,
 (8,'When and where were the first modern Olympic Games held?' , '1888' , '1896' , '1996 ' , '1998' , 'B') ,
 (9,'How many nations boycotted the 2008 Olympics in Beijing?' , '0' , '1' , '4 ' , '15' , 'A') ,
 (10,'Which country hosted the 1936 Summer Olympics?' , 'Spain' , 'France' , 'Germany ' , 'Poland' , 'C') ,
-(11,'Which country won the most gold medals in at the 1996 Summer Olympics?' , 'Belgium' , 'Great Britain' , 'Finland ' , 'USA' , 'D') ,
+(11,'Which country won the most gold medals in the 1996 Summer Olympics?' , 'Belgium' , 'Great Britain' , 'Finland ' , 'USA' , 'D') ,
 (12,'Which country hosted the 1992 Summer Olympics?' , 'Spain' , 'Brazil' , 'Norway ' , 'India' , 'A') ,
 (13,'Who is the first black person to win individual swimming gold?' , 'Nelson Mandela' , 'Anthony Nesty ' , 'Jesse Jackson ' , 'Muhammad Ali' , 'B') ,
 (14,'Which discipline returned to the summer Olympic in 1988, after 64 years of absence?' , 'Snowboarding' , 'Football' , 'Tennis ' , 'Curling' , 'C') ,
 (15,'Which country won the most medals in Olympics since their inception?' , 'Soviet Union' , 'USA' , 'China ' , 'Great Britain' , 'B') ,
-(16,'Which ONE of the following countries has never won a medal in Olympics?' , 'Iceland' , 'Turkey' , 'Sudan ' , 'Albania' , 'D') ,
-(17,'Since when a Freestyle skiing is an Olympics’ discipline?' , '1992' , '1994' , '1996 ' , '1998' , 'A') ,
-(18,'Which the Spanish athlete is the first and only one to win gold in the Winter Olympics?' , 'Aurelio García' , 'Sergio Ramos' , 'Francisco Fernández Ochoa ' , 'Pepe' , 'C') ,
+(16,'Which one of the following countries has never won a medal in Olympics?' , 'Iceland' , 'Turkey' , 'Sudan ' , 'Albania' , 'D') ,
+(17,'Since when a Freestyle skiing is an Olympics discipline?' , '1992' , '1994' , '1996 ' , '1998' , 'A') ,
+(18,'Which Spanish athlete is the first and only one to win gold in the Winter Olympics?' , 'Aurelio García' , 'Sergio Ramos' , 'Francisco Fernández Ochoa ' , 'Pepe' , 'C') ,
 (19,'Who won medals (any) in five consecutive Olympics in the same discipline, as the first person in history?' , 'Georg Hackl ' , 'Phoebe Mills' , 'Kwon Jong Yul ' , 'Giorgio Moroder' , 'A') ,
-(20,'Which country won the most GOLD medals at the 2002 Winter Paralympics?' , 'USA' , 'Norway' , 'Germany ' , 'Canada' , 'C') ,
+(20,'Which country won the most GOLD medals in the 2002 Winter Paralympics?' , 'USA' , 'Norway' , 'Germany ' , 'Canada' , 'C') ,
 (21,'Which country hosts the 2016 Summer Olympics?' , 'Argentina' , 'Mexico' , 'Brazil ' , 'Chile' , 'C') ,
 (22,'Who became the most decorated athlete of all time during the 2012 Summer Olympics?' , 'Michael Phelps' , 'Mark Spitz' , 'Ole Einar Bjorndalen ' , 'Chris Hoy' , 'A') ,
 (23,'Which Olympic discipline represents Jenny Thompson?' , 'Gymnastics' , 'Swimming' , 'Biathlon ' , 'Fencing' , 'B') ,
@@ -48,3 +53,6 @@ insert into Olympics values
 (38,'Which company is set to establish first-ever India House at Paris Olympics 2024?' , 'Reliance Industries' , 'Tata Group' , 'Adani Industries ' , 'Mahindra and Mahindra' , 'A') ,
 (39,'Which year has been born an Olympic-level equestrian rider Andrew Hoy?' , '1990' , '1959' , '1688 ' , '1923' , 'B') ,
 (40,'Which two countries have been represented by a sailor Durward Knowles at the Olympics between 1948–1972 and 1988?' , 'Vatican and Poland' , 'France and Russia' , 'USA and Great Britain ' , 'Great Britain and Bahamas' , 'D') ;
+
+
+select * from Olympics  WHERE correct_option = 'D';
