@@ -68,9 +68,7 @@ public class main_quiz_page extends javax.swing.JFrame {
     final private static String[] prize = new String[]{"0","5,000","10,000","20,000","40,000","80,000","1.5 Lakh","7.5 Lakh","25 Lakh","50 Lakh","75 Lakh","1 Crore","10 Crore","50 Crore","75 Crore","1 Arab"};
     private static int prize_count = 0;
     private static int label = 0;
-    
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+
     private void initComponents() {
 
         Confirm = new javax.swing.JPanel();
@@ -305,13 +303,9 @@ public class main_quiz_page extends javax.swing.JFrame {
         are_you_sure_option.setVisible(true);
         are_you_sure.setVisible(true);
         Confirm.setVisible(true);
-    }//GEN-LAST:event_option_aMouseClicked
+    }
 
-    private void option_aMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_option_aMousePressed
-
-    }//GEN-LAST:event_option_aMousePressed
-
-    private void yesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesActionPerformed
+    private void yesActionPerformed(java.awt.event.ActionEvent evt) {
         if(start_check == false)
         {
                         try {
