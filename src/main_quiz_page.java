@@ -68,6 +68,7 @@ public class main_quiz_page extends javax.swing.JFrame {
     final private static String[] prize = new String[]{"0","5,000","10,000","20,000","40,000","80,000","1.5 Lakh","7.5 Lakh","25 Lakh","50 Lakh","75 Lakh","1 Crore","10 Crore","50 Crore","75 Crore","1 Arab"};
     private static int prize_count = 0;
     private static int label = 0;
+    private static boolean arab = false;
 
     private void initComponents() {
 
@@ -277,9 +278,6 @@ public class main_quiz_page extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 option_aMouseClicked(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                option_aMousePressed(evt);
-            }
         });
         getContentPane().add(option_a, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 600, 360, 50));
 
@@ -294,9 +292,9 @@ public class main_quiz_page extends javax.swing.JFrame {
         getContentPane().add(main_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 1, 1500, 800));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void option_aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_option_aMouseClicked
+    private void option_aMouseClicked(java.awt.event.MouseEvent evt) {                                      
         chosen_option = 'A';
         are_you_sure_option.setText(Character.toString(chosen_option));
         main_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/select_a.png")));
@@ -448,6 +446,8 @@ public class main_quiz_page extends javax.swing.JFrame {
                             prize_count = 0;
                             label = 0;
                             next_question = false;
+                            if(arab == true)
+                                new quiz_page1(unique_id).setVisible(true);
                             new main_quiz_page(unique_id,table_name).setVisible(true);
                             this.dispose();
                     }
@@ -459,9 +459,11 @@ public class main_quiz_page extends javax.swing.JFrame {
                 {
                     no.setVisible(false);
                     String pint = "Congratulations! You have won 1 Arab! Continue to home page!";
-                    are_you_ready.setText("<html>" +pint+ "</html>");
+                    are_you_ready.setText("<html><center>" +pint+ "</center></html>");
                     are_you_sure.setVisible(false);
                     are_you_sure_option.setVisible(false);
+                    prize_count++;
+                    arab = true;
                     game_on = false;
                 }
                 else
@@ -634,10 +636,16 @@ public class main_quiz_page extends javax.swing.JFrame {
 
             }
         }
-    }//GEN-LAST:event_yesActionPerformed
+    }                                   
 
     private void noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noActionPerformed
-        if(start_check == false || game_on == false)
+        if(start_check == false && game_on==true)
+        {
+            new quiz_page1(unique_id).setVisible(true);
+            this.dispose();
+        }
+        
+        else if(start_check == false || game_on == false)
         {
             int amount_int;
             String amount_text = prize[prize_count-1];
